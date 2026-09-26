@@ -1,0 +1,363 @@
+{{HEAD:Estimer mon bien — Estimation confidentielle · Triade Concept Immo|Obtenez une première estimation confidentielle de votre demeure en six étapes, puis affinez-la avec un expert Triade Concept Immo.}}
+<body>
+{{HEADER:dark|light|estimate}}
+
+<main class="pt-24 md:pt-28">
+  <!-- =====================================================================
+       ESTIMATION — parcours en 6 étapes + résultat
+       Colonne gauche : panneau éditorial collant (image qui change par étape,
+       jauge de précision). Colonne droite : formulaire pas à pas.
+       ===================================================================== -->
+  <section class="px-3 md:px-5" aria-labelledby="est-title">
+    <div class="mx-auto grid max-w-shell gap-3 lg:grid-cols-12 lg:gap-4" data-estimate>
+
+      <!-- Panneau éditorial -->
+      <aside class="est-aside card relative min-h-[420px] text-white lg:sticky lg:top-24 lg:col-span-5 lg:h-[calc(100svh-112px)] lg:min-h-[640px]">
+        <img src="assets/img/estimation.webp" data-aside-img="1" alt="" class="est-img is-active" />
+        <img src="assets/img/prop-paris.webp" data-aside-img="2" alt="" class="est-img" loading="lazy" />
+        <img src="assets/img/standard-2.webp" data-aside-img="3" alt="" class="est-img" loading="lazy" />
+        <img src="assets/img/villa-2.webp" data-aside-img="4" alt="" class="est-img" loading="lazy" />
+        <img src="assets/img/prop-luberon.webp" data-aside-img="5" alt="" class="est-img" loading="lazy" />
+        <img src="assets/img/villa-3.webp" data-aside-img="6" alt="" class="est-img" loading="lazy" />
+        <img src="assets/img/hero-dusk.webp" data-aside-img="7" alt="" class="est-img" loading="lazy" />
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-noir/85 via-noir/25 to-noir/30"></div>
+
+        <div class="relative flex h-full flex-col justify-between gap-14 p-6 md:p-9">
+          <div class="flex items-center justify-between">
+            <span class="pill-glass whitespace-nowrap"><i data-lucide="lock-keyhole" class="h-3.5 w-3.5"></i> Estimation confidentielle</span>
+            <span class="eyebrow hidden text-white/60 sm:inline">Réponse sous 48 h</span>
+          </div>
+
+          <div>
+            <p class="eyebrow text-white/65">N° 05 — Vendre</p>
+            <h1 id="est-title" class="mt-4 font-serif text-[clamp(2.6rem,4.6vw,4.4rem)] leading-[1.02]">Ce que vaut <em>vraiment</em> votre demeure.</h1>
+            <p class="mt-5 max-w-sm text-[15px] leading-relaxed text-white/75" data-aside-quote>Six questions, quelques minutes. Une première lecture de marché fondée sur nos ventes récentes — puis l’œil d’un expert, sur place.</p>
+
+            <!-- Jauge de précision -->
+            <div class="mt-8 max-w-sm">
+              <div class="flex items-baseline justify-between text-xs text-white/70"><span>Précision de l’estimation</span><span class="font-serif text-2xl text-white" data-precision>12 %</span></div>
+              <div class="mt-3 h-[3px] overflow-hidden rounded-full bg-white/20"><div class="est-precision h-full rounded-full bg-white" data-precision-bar></div></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Formulaire -->
+      <div class="rounded-3xl bg-white p-5 shadow-[0_1px_0_rgba(28,25,23,.04)] sm:p-8 lg:col-span-7 lg:p-12">
+
+        <!-- Version Essentiel : formulaire de demande classique -->
+        <div data-tier="simple">
+          <p class="eyebrow text-moka/45">Demande d’estimation</p>
+          <h1 class="mt-4 font-serif text-[clamp(2rem,3.4vw,3rem)] leading-tight">Parlons de votre <em>demeure</em>.</h1>
+          <p class="mt-3 text-sm text-moka/55">Décrivez votre bien en quelques mots : un conseiller revient vers vous sous 48 h avec une première fourchette de valeur.</p>
+          <form class="mt-10" data-fake-submit="Merci — votre demande est transmise, un conseiller vous répond sous 48 h">
+            <div class="grid gap-3 md:grid-cols-2">
+              <div class="float-field"><input id="es-name" placeholder=" " autocomplete="name" required /><label for="es-name">Nom complet *</label></div>
+              <div class="float-field"><input id="es-mail" type="email" placeholder=" " autocomplete="email" required /><label for="es-mail">E-mail *</label></div>
+              <div class="float-field"><input id="es-tel" type="tel" placeholder=" " autocomplete="tel" /><label for="es-tel">Téléphone</label></div>
+              <div class="float-field"><input id="es-addr" placeholder=" " autocomplete="off" /><label for="es-addr">Ville du bien</label></div>
+            </div>
+            <fieldset class="mt-6">
+              <legend class="eyebrow mb-3 text-moka/45">Type de bien</legend>
+              <div class="flex flex-wrap gap-2">
+                <label class="opt-chip"><input type="radio" name="es-type" checked />Villa · Maison</label>
+                <label class="opt-chip"><input type="radio" name="es-type" />Appartement</label>
+                <label class="opt-chip"><input type="radio" name="es-type" />Bastide · Domaine</label>
+              </div>
+            </fieldset>
+            <div class="float-field float-field--area mt-6"><textarea id="es-msg" rows="4" placeholder=" "></textarea><label for="es-msg">Quelques mots sur votre bien (surface, atouts…)</label></div>
+            <button class="btn-dark mt-6">Envoyer ma demande <i data-lucide="arrow-right" class="i i-go h-4 w-4"></i></button>
+          </form>
+          <p class="mt-6 text-[11px] leading-relaxed text-moka/40">Envie d’une estimation immédiate et détaillée ? <button type="button" class="underline-offset-4 hover:underline" onclick="window.MoPackage && MoPackage.set('signature')">Passez au périmètre Signature</button> pour débloquer le simulateur en ligne.</p>
+        </div>
+
+        <!-- Version Signature / Prestige FULL : simulateur dynamique complet -->
+        <div data-tier="full">
+        <!-- Progression -->
+        <div class="est-progress" data-est-progress>
+          <div class="flex items-center justify-between">
+            <p class="eyebrow text-moka/45"><span data-step-num>01</span><span data-step-of> / 06</span> — <span data-step-name>Votre demeure</span></p>
+            <button type="button" class="text-xs text-moka/45 underline-offset-4 hover:text-moka hover:underline" data-est-restart hidden>Recommencer</button>
+          </div>
+          <ol class="mt-4 grid grid-cols-6 gap-1.5" aria-hidden="true">
+            <li class="est-seg is-active"></li><li class="est-seg"></li><li class="est-seg"></li><li class="est-seg"></li><li class="est-seg"></li><li class="est-seg"></li>
+          </ol>
+        </div>
+
+        <form class="mt-10" data-est-form novalidate>
+
+          <!-- 01 · Type -->
+          <fieldset class="est-step is-active" data-step="1" data-name="Votre demeure">
+            <legend class="font-serif text-[clamp(2rem,3.4vw,3rem)] leading-tight">Quelle demeure souhaitez-vous <em>confier</em> ?</legend>
+            <p class="mt-3 text-sm text-moka/55">Sélectionnez la typologie la plus proche.</p>
+            <div class="mt-8 grid grid-cols-2 gap-2.5 md:grid-cols-3">
+              <label class="opt-card"><input type="radio" name="type" value="Appartement" data-coef="1" /><i data-lucide="building-2" class="opt-ico"></i><span class="opt-title">Appartement</span><span class="opt-sub">Penthouse, duplex, étage noble</span></label>
+              <label class="opt-card"><input type="radio" name="type" value="Villa" data-coef="1" checked /><i data-lucide="house" class="opt-ico"></i><span class="opt-title">Maison · Villa</span><span class="opt-sub">Contemporaine ou d’architecte</span></label>
+              <label class="opt-card"><input type="radio" name="type" value="Chalet" data-coef="1.05" /><i data-lucide="mountain-snow" class="opt-ico"></i><span class="opt-title">Chalet</span><span class="opt-sub">Station, ski-in / ski-out</span></label>
+              <label class="opt-card"><input type="radio" name="type" value="Bastide" data-coef=".95" /><i data-lucide="trees" class="opt-ico"></i><span class="opt-title">Bastide · Mas</span><span class="opt-sub">Pierre, restanques, oliviers</span></label>
+              <label class="opt-card"><input type="radio" name="type" value="Hôtel particulier" data-coef="1.15" /><i data-lucide="landmark" class="opt-ico"></i><span class="opt-title">Hôtel particulier</span><span class="opt-sub">Entre cour et jardin</span></label>
+              <label class="opt-card"><input type="radio" name="type" value="Domaine" data-coef=".85" /><i data-lucide="castle" class="opt-ico"></i><span class="opt-title">Domaine · Château</span><span class="opt-sub">Vignoble, parc, dépendances</span></label>
+            </div>
+            <p class="est-error" data-error>Choisissez une typologie pour continuer.</p>
+          </fieldset>
+
+          <!-- 02 · Localisation -->
+          <fieldset class="est-step" data-step="2" data-name="Localisation">
+            <legend class="font-serif text-[clamp(2rem,3.4vw,3rem)] leading-tight">Où se situe-t-elle ?</legend>
+            <p class="mt-3 text-sm text-moka/55">L’adresse exacte reste strictement confidentielle.</p>
+            <div class="relative mt-8">
+              <label for="est-address" class="eyebrow text-moka/45">Adresse</label>
+              <div class="relative mt-3">
+                <i data-lucide="map-pin" class="pointer-events-none absolute left-5 top-1/2 h-4 w-4 -translate-y-1/2 text-moka/40"></i>
+                <input id="est-address" name="address" autocomplete="off" class="field !pl-12 !text-[15px]" placeholder="Commencez à saisir une adresse…" value="Chemin des Cyprès, Mougins" data-address />
+                <ul class="est-suggest" data-suggest role="listbox" aria-label="Suggestions d’adresses"></ul>
+              </div>
+            </div>
+            <div class="mt-8">
+              <p class="eyebrow text-moka/45">Ou choisissez une région</p>
+              <div class="mt-3 flex flex-wrap gap-2" data-region-group>
+                <label class="opt-chip"><input type="radio" name="region" value="Paris" data-ppm="15500" />Paris</label>
+                <label class="opt-chip"><input type="radio" name="region" value="Ouest parisien" data-ppm="9000" />Ouest parisien</label>
+                <label class="opt-chip"><input type="radio" name="region" value="Côte d’Azur" data-ppm="17000" checked />Côte d’Azur</label>
+                <label class="opt-chip"><input type="radio" name="region" value="Alpes" data-ppm="14000" />Alpes</label>
+                <label class="opt-chip"><input type="radio" name="region" value="Provence" data-ppm="9500" />Provence</label>
+                <label class="opt-chip"><input type="radio" name="region" value="Côte Basque" data-ppm="11500" />Côte Basque</label>
+              </div>
+            </div>
+            <p class="est-error" data-error>Indiquez une adresse ou une région.</p>
+          </fieldset>
+
+          <!-- 03 · Caractéristiques -->
+          <fieldset class="est-step" data-step="3" data-name="Caractéristiques">
+            <legend class="font-serif text-[clamp(2rem,3.4vw,3rem)] leading-tight">Ses <em>proportions</em>.</legend>
+            <p class="mt-3 text-sm text-moka/55">Des valeurs approximatives suffisent à ce stade.</p>
+            <div class="mt-8 grid gap-8 md:grid-cols-2">
+              <div class="rounded-3xl bg-ivoire p-6">
+                <div class="flex items-baseline justify-between"><label for="est-surface" class="eyebrow text-moka/45">Surface habitable</label><output class="font-serif text-3xl" data-out="surface">280 m²</output></div>
+                <input id="est-surface" type="range" name="surface" min="60" max="1500" step="10" value="280" class="lux-range mt-6" data-range="surface" data-unit="m²" />
+                <div class="mt-2 flex justify-between text-[11px] text-moka/40"><span>60 m²</span><span>1 500 m²</span></div>
+              </div>
+              <div class="rounded-3xl bg-ivoire p-6">
+                <div class="flex items-baseline justify-between"><label for="est-land" class="eyebrow text-moka/45">Terrain</label><output class="font-serif text-3xl" data-out="land">Aucun</output></div>
+                <input id="est-land" type="range" name="land" min="0" max="40000" step="250" value="0" class="lux-range mt-6" data-range="land" data-unit="m²" />
+                <div class="mt-2 flex justify-between text-[11px] text-moka/40"><span>Aucun</span><span>4 ha +</span></div>
+              </div>
+              <div class="flex items-center justify-between rounded-3xl bg-ivoire p-6">
+                <div><p class="eyebrow text-moka/45">Pièces</p><p class="mt-1 text-xs text-moka/50">dont chambres & suites</p></div>
+                <div class="stepper" data-stepper="rooms" data-min="1" data-max="30">
+                  <button type="button" data-dec aria-label="Retirer une pièce"><i data-lucide="minus" class="h-4 w-4"></i></button>
+                  <output class="w-10 text-center font-serif text-3xl" data-val>6</output>
+                  <button type="button" data-inc aria-label="Ajouter une pièce"><i data-lucide="plus" class="h-4 w-4"></i></button>
+                </div>
+              </div>
+              <div class="flex items-center justify-between rounded-3xl bg-ivoire p-6">
+                <div><p class="eyebrow text-moka/45">Suites</p><p class="mt-1 text-xs text-moka/50">avec salle de bains privative</p></div>
+                <div class="stepper" data-stepper="suites" data-min="0" data-max="20">
+                  <button type="button" data-dec aria-label="Retirer une suite"><i data-lucide="minus" class="h-4 w-4"></i></button>
+                  <output class="w-10 text-center font-serif text-3xl" data-val>3</output>
+                  <button type="button" data-inc aria-label="Ajouter une suite"><i data-lucide="plus" class="h-4 w-4"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8">
+              <p class="eyebrow text-moka/45">État général</p>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <label class="opt-chip"><input type="radio" name="state" value="À rafraîchir" data-coef=".84" />À rafraîchir</label>
+                <label class="opt-chip"><input type="radio" name="state" value="Bon état" data-coef="1" checked />Bon état</label>
+                <label class="opt-chip"><input type="radio" name="state" value="Rénové par architecte" data-coef="1.1" />Rénové par architecte</label>
+                <label class="opt-chip"><input type="radio" name="state" value="Neuf" data-coef="1.14" />Neuf · moins de 5 ans</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- 04 · Atouts -->
+          <fieldset class="est-step" data-step="4" data-name="Atouts">
+            <legend class="font-serif text-[clamp(2rem,3.4vw,3rem)] leading-tight">Ce qui la rend <em>singulière</em>.</legend>
+            <p class="mt-3 text-sm text-moka/55">Plusieurs choix possibles — chaque atout affine la valorisation.</p>
+            <div class="mt-8 grid grid-cols-2 gap-2.5 md:grid-cols-4">
+              <label class="opt-card opt-card--sm"><input type="checkbox" name="assets" value="Vue mer" data-pct="12" checked /><i data-lucide="waves" class="opt-ico"></i><span class="opt-title">Vue mer</span></label>
+              <label class="opt-card opt-card--sm"><input type="checkbox" name="assets" value="Vue monument" data-pct="8" /><i data-lucide="landmark" class="opt-ico"></i><span class="opt-title">Vue dégagée · monument</span></label>
+              <label class="opt-card opt-card--sm"><input type="checkbox" name="assets" value="Piscine" data-pct="5" checked /><i data-lucide="droplets" class="opt-ico"></i><span class="opt-title">Piscine</span></label>
+              <label class="opt-card opt-card--sm"><input type="checkbox" name="assets" value="Terrasse" data-pct="5" /><i data-lucide="sun" class="opt-ico"></i><span class="opt-title">Terrasse · rooftop</span></label>
+              <label class="opt-card opt-card--sm"><input type="checkbox" name="assets" value="Jardin" data-pct="4" /><i data-lucide="flower-2" class="opt-ico"></i><span class="opt-title">Jardin paysager</span></label>
+              <label class="opt-card opt-card--sm"><input type="checkbox" name="assets" value="Dépendance" data-pct="4" /><i data-lucide="house-plus" class="opt-ico"></i><span class="opt-title">Maison d’amis</span></label>
+              <label class="opt-card opt-card--sm"><input type="checkbox" name="assets" value="Spa" data-pct="3" /><i data-lucide="wine" class="opt-ico"></i><span class="opt-title">Cave · spa</span></label>
+              <label class="opt-card opt-card--sm"><input type="checkbox" name="assets" value="Stationnement" data-pct="2" /><i data-lucide="car" class="opt-ico"></i><span class="opt-title">Garage · parking</span></label>
+              <label class="opt-card opt-card--sm"><input type="checkbox" name="assets" value="Gardien" data-pct="2" /><i data-lucide="shield-check" class="opt-ico"></i><span class="opt-title">Gardien · sécurité</span></label>
+              <label class="opt-card opt-card--sm"><input type="checkbox" name="assets" value="Signature" data-pct="6" /><i data-lucide="pen-tool" class="opt-ico"></i><span class="opt-title">Architecte signataire</span></label>
+              <label class="opt-card opt-card--sm"><input type="checkbox" name="assets" value="Feng Shui" data-pct="2" /><i data-lucide="leaf" class="opt-ico"></i><span class="opt-title">Étude Feng Shui</span></label>
+              <label class="opt-card opt-card--sm"><input type="checkbox" name="assets" value="Domotique" data-pct="1" /><i data-lucide="cpu" class="opt-ico"></i><span class="opt-title">Domotique</span></label>
+            </div>
+          </fieldset>
+
+          <!-- 05 · Projet -->
+          <fieldset class="est-step" data-step="5" data-name="Votre projet">
+            <legend class="font-serif text-[clamp(2rem,3.4vw,3rem)] leading-tight">Votre <em>calendrier</em>.</legend>
+            <p class="mt-3 text-sm text-moka/55">Nous adaptons notre accompagnement à votre rythme.</p>
+            <div class="mt-8 grid gap-2.5 md:grid-cols-3">
+              <label class="opt-card opt-card--row"><input type="radio" name="timing" value="Sous 3 mois" /><span class="opt-title">Sous 3 mois</span><span class="opt-sub">Mise en vente prochaine</span></label>
+              <label class="opt-card opt-card--row"><input type="radio" name="timing" value="Dans l’année" checked /><span class="opt-title">Dans l’année</span><span class="opt-sub">Projet en réflexion</span></label>
+              <label class="opt-card opt-card--row"><input type="radio" name="timing" value="Je m’informe" /><span class="opt-title">Je m’informe</span><span class="opt-sub">Connaître la valeur de mon patrimoine</span></label>
+            </div>
+            <div class="mt-8">
+              <p class="eyebrow text-moka/45">Vous êtes</p>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <label class="opt-chip"><input type="radio" name="owner" value="Propriétaire" checked />Propriétaire</label>
+                <label class="opt-chip"><input type="radio" name="owner" value="Indivision · succession" />Indivision · succession</label>
+                <label class="opt-chip"><input type="radio" name="owner" value="Mandataire" />Notaire · family office</label>
+              </div>
+            </div>
+            <label class="mt-8 flex cursor-pointer items-center justify-between gap-6 rounded-3xl bg-moka p-6 text-ivoire">
+              <span>
+                <span class="flex items-center gap-2 font-serif text-2xl"><i data-lucide="eye-off" class="h-5 w-5 text-ivoire/60"></i> Vente <em>off-market</em></span>
+                <span class="mt-1 block max-w-md text-xs leading-relaxed text-ivoire/60">Votre bien n’est jamais publié : il est présenté en privé à notre cercle d’acquéreurs qualifiés.</span>
+              </span>
+              <span class="switch"><input type="checkbox" name="offmarket" value="oui" /><span class="switch-track" aria-hidden="true"></span></span>
+            </label>
+          </fieldset>
+
+          <!-- 06 · Coordonnées -->
+          <fieldset class="est-step" data-step="6" data-name="Coordonnées">
+            <legend class="font-serif text-[clamp(2rem,3.4vw,3rem)] leading-tight">À qui adresser votre <em>estimation</em> ?</legend>
+            <p class="mt-3 text-sm text-moka/55">Un seul interlocuteur, dédié. Aucun démarchage, jamais.</p>
+            <div class="mt-8 flex flex-wrap gap-2">
+              <label class="opt-chip"><input type="radio" name="civ" value="Madame" />Madame</label>
+              <label class="opt-chip"><input type="radio" name="civ" value="Monsieur" />Monsieur</label>
+              <label class="opt-chip"><input type="radio" name="civ" value="" checked />Ne pas préciser</label>
+            </div>
+            <div class="mt-5 grid gap-3 md:grid-cols-2">
+              <div class="float-field"><input id="est-first" name="first" placeholder=" " autocomplete="given-name" value="Nathalie" /><label for="est-first">Prénom</label></div>
+              <div class="float-field"><input id="est-last" name="last" placeholder=" " autocomplete="family-name" required value="Prigent" /><label for="est-last">Nom *</label></div>
+              <div class="float-field"><input id="est-mail" type="email" name="email" placeholder=" " autocomplete="email" required value="n.prigent@mail.com" /><label for="est-mail">E-mail *</label></div>
+              <div class="float-field"><input id="est-tel" type="tel" name="tel" placeholder=" " autocomplete="tel" value="+33 6 45 12 33 90" /><label for="est-tel">Téléphone</label></div>
+            </div>
+            <div class="mt-6">
+              <p class="eyebrow text-moka/45">Être recontacté par</p>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <label class="opt-chip"><input type="radio" name="contact" value="Téléphone" checked /><i data-lucide="phone" class="h-3.5 w-3.5"></i>Téléphone</label>
+                <label class="opt-chip"><input type="radio" name="contact" value="E-mail" /><i data-lucide="mail" class="h-3.5 w-3.5"></i>E-mail</label>
+                <label class="opt-chip"><input type="radio" name="contact" value="WhatsApp" /><i data-lucide="message-circle" class="h-3.5 w-3.5"></i>Message</label>
+              </div>
+            </div>
+            <label class="mt-6 flex cursor-pointer items-start gap-3 text-xs leading-relaxed text-moka/55">
+              <input type="checkbox" name="consent" class="est-check mt-0.5" required />
+              <span>J’accepte que Triade Concept Immo utilise ces informations pour me transmettre mon estimation. Données non cédées, conservées 12 mois.</span>
+            </label>
+            <p class="est-error" data-error>Merci d’indiquer votre nom, un e-mail valide et d’accepter le traitement.</p>
+          </fieldset>
+
+          <!-- Navigation -->
+          <div class="mt-12 flex items-center justify-between gap-4 border-t border-moka/10 pt-6" data-est-nav>
+            <button type="button" class="btn-ghost" data-prev disabled><i data-lucide="arrow-left" class="h-4 w-4"></i> Retour</button>
+            <p class="hidden text-xs text-moka/40 md:block"><kbd class="rounded border border-moka/15 px-1.5 py-0.5 font-sans">Entrée</kbd> pour continuer</p>
+            <button type="submit" class="btn-dark" data-next><span data-next-label>Continuer</span> <i data-lucide="arrow-right" class="i i-go h-4 w-4"></i></button>
+          </div>
+        </form>
+
+        <!-- Calcul en cours -->
+        <div class="est-loading" data-est-loading hidden>
+          <svg class="est-loader" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true"><path d="M11 32V18a9 9 0 0 1 18 0v14"/><path d="M5 32h30"/><path d="M15 32a5 5 0 0 1 10 0"/></svg>
+          <p class="mt-6 font-serif text-3xl">Lecture du marché <em>en cours</em>…</p>
+          <ul class="mt-6 space-y-2 text-sm text-moka/55" data-loading-steps>
+            <li>Comparaison avec 1 240 ventes de prestige</li>
+            <li>Pondération de l’emplacement et des atouts</li>
+            <li>Ajustement selon la tension du marché local</li>
+          </ul>
+        </div>
+
+        <!-- Résultat -->
+        <div class="est-result" data-est-result hidden>
+          <h2 class="mt-10 font-serif text-[clamp(2rem,3.4vw,3rem)] leading-tight"><span data-r-type>Villa</span> <em data-r-place>Côte d’Azur</em></h2>
+
+          <div class="mt-8 rounded-3xl bg-moka p-7 text-ivoire md:p-10">
+            <div class="flex flex-wrap items-end justify-between gap-6">
+              <div>
+                <p class="text-xs text-ivoire/55">Fourchette de valeur indicative</p>
+                <p class="mt-3 font-serif text-[clamp(2.4rem,5vw,4.6rem)] leading-[1.05]"><span data-r-low>0</span> <span class="text-ivoire/40">—</span> <span data-r-high>0</span></p>
+              </div>
+              <span class="pill border border-white/15 text-ivoire/80"><i data-lucide="gauge" class="h-4 w-4"></i> Indice de confiance <b class="font-semibold text-ivoire" data-r-conf>—</b></span>
+            </div>
+            <!-- Jauge de marché -->
+            <div class="mt-10">
+              <div class="relative h-2 rounded-full bg-gradient-to-r from-sage/40 via-sable/70 to-terre/70">
+                <span class="est-marker" data-r-marker><span class="est-marker-dot"></span><span class="est-marker-label">Valeur médiane · <b data-r-mid>—</b></span></span>
+              </div>
+              <div class="mt-3 flex justify-between text-[11px] text-ivoire/45"><span>Vente rapide</span><span>Prix de marché</span><span>Acquéreur coup de cœur</span></div>
+            </div>
+            <div class="mt-10 grid gap-5 border-t sm:grid-cols-3 sm:gap-4 border-white/10 pt-6 text-sm">
+              <div><p class="text-xs text-ivoire/50">Prix au m²</p><p class="mt-1 font-serif text-2xl" data-r-ppm>—</p></div>
+              <div><p class="text-xs text-ivoire/50">Délai de vente estimé</p><p class="mt-1 font-serif text-2xl" data-r-delay>—</p></div>
+              <div><p class="text-xs text-ivoire/50">Plus-value des atouts</p><p class="mt-1 font-serif text-2xl" data-r-assets>—</p></div>
+            </div>
+          </div>
+
+          <!-- Récapitulatif -->
+          <dl class="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 text-sm md:grid-cols-3" data-r-summary></dl>
+
+          <!-- Rendez-vous expert -->
+          <div class="mt-10 rounded-3xl border border-moka/10 p-6 md:p-8">
+            <div class="flex flex-wrap items-center gap-5">
+              <img src="assets/img/agent.webp" alt="Portrait d’Antoine Mercier" class="h-16 w-16 rounded-full object-cover" />
+              <div class="flex-1">
+                <p class="font-serif text-2xl">Affiner avec <em>Antoine Mercier</em></p>
+                <p class="text-xs text-moka/55">Expert estimation · 22 ans d’expérience · visite sous 72 h</p>
+              </div>
+            </div>
+            <div class="mt-6 flex flex-wrap gap-2" data-r-slots>
+              <button type="button" class="chip" aria-pressed="false">Lun. · 10 h 00</button>
+              <button type="button" class="chip" aria-pressed="false">Mar. · 14 h 30</button>
+              <button type="button" class="chip" aria-pressed="false">Mer. · 09 h 30</button>
+              <button type="button" class="chip" aria-pressed="false">Jeu. · 17 h 00</button>
+              <button type="button" class="chip" aria-pressed="false">Visio · à la carte</button>
+            </div>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <button type="button" class="btn-dark" data-r-book>Confirmer la visite d’expertise <i data-lucide="arrow-right" class="i i-go h-4 w-4"></i></button>
+              <button type="button" class="btn-ghost" onclick="oreeToast('Pré-rapport envoyé à votre adresse e-mail')"><i data-lucide="file-down" class="h-4 w-4"></i> Recevoir le pré-rapport</button>
+            </div>
+          </div>
+          <p class="mt-6 text-[11px] leading-relaxed text-moka/40">Estimation indicative calculée à partir de données de démonstration. Seule une visite permet d’établir un avis de valeur engageant.</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Méthode -->
+  <section class="shell py-24 md:py-36" aria-labelledby="method-title">
+    <div class="grid gap-10 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="eyebrow reveal text-moka/50">Notre méthode</p>
+        <h2 id="method-title" class="reveal mt-4 text-h2">Une valeur <em>juste</em>, jamais complaisante.</h2>
+      </div>
+      <ol class="grid gap-3 md:grid-cols-3 lg:col-span-8">
+        <li class="card reveal bg-sable/60 p-7" style="--d:80ms"><span class="font-serif text-5xl text-moka/25">i.</span><h3 class="mt-8 font-serif text-2xl">Lecture de marché</h3><p class="mt-3 text-sm leading-relaxed text-moka/60">Ventes signées, biens retirés, délais réels : nous croisons nos transactions et les références notariales du secteur.</p></li>
+        <li class="card reveal bg-sable/60 p-7" style="--d:160ms"><span class="font-serif text-5xl text-moka/25">ii.</span><h3 class="mt-8 font-serif text-2xl">Visite d’expertise</h3><p class="mt-3 text-sm leading-relaxed text-moka/60">Lumière, volumes, matériaux, vues : ce qu’aucun algorithme ne mesure, un expert le relève sur place.</p></li>
+        <li class="card reveal bg-moka p-7 text-ivoire" style="--d:240ms"><span class="font-serif text-5xl text-ivoire/25">iii.</span><h3 class="mt-8 font-serif text-2xl">Avis de valeur</h3><p class="mt-3 text-sm leading-relaxed text-ivoire/60">Un dossier relié, remis en main propre sous 7 jours : valeur, stratégie de mise en marché et acquéreurs pressentis.</p></li>
+      </ol>
+    </div>
+
+    <div class="mt-20 grid gap-10 border-t border-moka/10 pt-12 md:grid-cols-12">
+      <blockquote class="reveal md:col-span-7">
+        <p class="font-serif text-[clamp(1.8rem,3vw,2.6rem)] leading-snug">« L’estimation annoncée à la première visite était à 2 % du prix signé. Tout s’est fait en toute <em>discrétion</em>, sans une seule annonce publique. »</p>
+        <footer class="mt-6 text-sm text-moka/55">Propriétaire d’une bastide, Luberon — vente off-market en 64 jours</footer>
+      </blockquote>
+      <div class="grid grid-cols-2 gap-6 self-end md:col-span-5">
+        <div class="reveal"><p class="font-serif text-5xl">± 3 %</p><p class="mt-2 text-xs text-moka/55">Écart moyen entre estimation et prix signé</p></div>
+        <div class="reveal" style="--d:80ms"><p class="font-serif text-5xl">31 %</p><p class="mt-2 text-xs text-moka/55">De nos ventes réalisées en off-market</p></div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="mt-20 grid gap-10 lg:grid-cols-12">
+      <h2 class="reveal font-serif text-4xl lg:col-span-4">Questions <em>fréquentes</em></h2>
+      <div class="divide-y divide-moka/10 border-y border-moka/10 lg:col-span-8">
+        <details class="faq group py-6" open><summary class="flex cursor-pointer list-none items-center justify-between gap-6 font-serif text-2xl">L’estimation en ligne est-elle gratuite ?<i data-lucide="plus" class="faq-ico h-5 w-5 shrink-0"></i></summary><p class="mt-4 max-w-2xl text-sm leading-relaxed text-moka/60">Oui, comme la visite d’expertise qui suit. Vous ne vous engagez à rien tant qu’aucun mandat n’est signé.</p></details>
+        <details class="faq group py-6"><summary class="flex cursor-pointer list-none items-center justify-between gap-6 font-serif text-2xl">Mes informations restent-elles confidentielles ?<i data-lucide="plus" class="faq-ico h-5 w-5 shrink-0"></i></summary><p class="mt-4 max-w-2xl text-sm leading-relaxed text-moka/60">Votre adresse n’est connue que de votre expert dédié. Aucune donnée n’est transmise à des tiers ni utilisée à des fins publicitaires.</p></details>
+        <details class="faq group py-6"><summary class="flex cursor-pointer list-none items-center justify-between gap-6 font-serif text-2xl">Qu’est-ce qu’une vente off-market ?<i data-lucide="plus" class="faq-ico h-5 w-5 shrink-0"></i></summary><p class="mt-4 max-w-2xl text-sm leading-relaxed text-moka/60">Le bien n’est jamais publié. Il est présenté en privé à des acquéreurs dont nous avons vérifié la capacité de financement.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{FOOTER}}
+{{TAIL}}

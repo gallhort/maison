@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connexion — Espace professionnel · Triade Concept Immo</title>
+  <meta name="description" content="Accédez à votre espace professionnel Triade Concept Immo : tableau de bord, mandats, biens et clients." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=1790456199" />
+</head>
+<body class="bg-ivoire text-moka">
+<main class="min-h-screen lg:flex">
+
+  <!-- Panneau image -->
+  <section class="relative hidden overflow-hidden lg:block lg:w-[52%]">
+    <img src="assets/img/hero-dusk.webp" alt="Villa Triade Concept Immo au crépuscule, Côte d’Azur" class="reveal-img is-in h-full w-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-moka/80 via-moka/15 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-moka/25 via-transparent to-transparent"></div>
+
+    <a href="index.html" class="absolute left-10 top-10 flex items-center gap-2.5 text-ivoire" aria-label="Triade Concept Immo — accueil">
+      <img src="assets/img/Logo_TriadeConceptImmo_blanc_fond_transparent.png" class="h-8 w-8 object-contain" alt="" aria-hidden="true" />
+      <span class="font-serif text-[1.45rem] leading-none tracking-tight">Triade Concept <em class="italic">Immo</em></span>
+    </a>
+
+    <div class="absolute bottom-12 left-10 right-10 text-ivoire">
+      <p class="eyebrow text-ivoire/60">Espace professionnel</p>
+      <blockquote class="mt-4 max-w-md font-serif text-[clamp(1.6rem,2.2vw,2.1rem)] leading-snug">« Chaque mandat, chaque client, chaque visite — réunis dans un seul espace, pensé pour nos conseillers. »</blockquote>
+      <p class="mt-5 text-xs text-ivoire/50">Réservé aux collaborateurs Triade Concept Immo</p>
+    </div>
+  </section>
+
+  <!-- Panneau formulaire -->
+  <section class="flex flex-1 flex-col justify-center px-6 py-16 sm:px-12 lg:w-[48%] lg:px-20">
+    <a href="index.html" class="mb-14 flex items-center gap-2.5 lg:hidden" aria-label="Triade Concept Immo — accueil">
+      <img src="assets/img/Logo_TriadeConceptImmo_sans_texte.png" class="h-9 w-9 rounded-lg object-contain" alt="" aria-hidden="true" />
+      <span class="font-serif text-[1.45rem] leading-none tracking-tight">Triade Concept <em class="italic">Immo</em></span>
+    </a>
+
+    <div class="mx-auto w-full max-w-sm">
+      <p class="eyebrow reveal text-moka/45">Espace professionnel</p>
+      <h1 class="reveal mt-4 text-h2" style="--d:80ms">Bon retour <em>parmi nous</em>.</h1>
+      <p class="reveal mt-3 text-[15px] leading-relaxed text-moka/55" style="--d:140ms">Connectez-vous pour retrouver votre tableau de bord, vos mandats et vos clients.</p>
+
+      <form class="reveal mt-10" style="--d:200ms" data-login-form novalidate>
+        <div class="space-y-4">
+          <div class="float-field"><input id="lg-mail" type="email" autocomplete="username" required placeholder=" " value="t.reig@triadeconceptimmo.fr" /><label for="lg-mail">E-mail professionnel</label></div>
+          <div class="float-field"><input id="lg-pass" type="password" autocomplete="current-password" required placeholder=" " value="MaisonOree2026" /><label for="lg-pass">Mot de passe</label></div>
+        </div>
+
+        <div class="mt-4 flex items-center justify-between text-xs text-moka/55">
+          <label class="flex items-center gap-2"><input type="checkbox" class="h-4 w-4 accent-moka" checked /> Rester connecté</label>
+          <a href="#" class="underline-offset-4 hover:text-moka hover:underline" onclick="event.preventDefault(); window.oreeToast && oreeToast('Un e-mail de réinitialisation vous a été envoyé')">Mot de passe oublié ?</a>
+        </div>
+
+        <div class="mt-7">
+          <p class="eyebrow mb-2.5 text-moka/45">Périmètre de démonstration</p>
+          <div class="flex flex-wrap gap-2" data-pkg-toggle role="group" aria-label="Périmètre de démonstration">
+            <button type="button" data-pkg="essentiel" class="pill-line transition aria-pressed:border-moka aria-pressed:bg-moka aria-pressed:text-ivoire">Essentiel</button>
+            <button type="button" data-pkg="signature" class="pill-line transition aria-pressed:border-moka aria-pressed:bg-moka aria-pressed:text-ivoire">Signature</button>
+            <button type="button" data-pkg="full" class="pill-line transition aria-pressed:border-moka aria-pressed:bg-moka aria-pressed:text-ivoire">Prestige FULL</button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-dark mt-8 w-full justify-center" data-login-submit><span data-login-label>Se connecter</span> <i data-lucide="arrow-right" class="i i-go h-4 w-4"></i></button>
+      </form>
+
+      <p class="reveal mt-8 text-center text-xs text-moka/45" style="--d:260ms">Pas encore de compte ? <a href="contact.html" class="underline-offset-4 hover:text-moka hover:underline">Contactez la Direction</a></p>
+    </div>
+  </section>
+</main>
+<div id="toast" class="toast" role="status" aria-live="polite">
+  <div class="flex items-center gap-3 rounded-full bg-moka py-3 pl-3 pr-6 text-sm text-ivoire shadow-float"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage"><i data-lucide="check" class="h-4 w-4"></i></span><span data-toast-msg></span></div>
+</div>
+<style>
+  /* Sélecteur de périmètre de démonstration (assets/js/package.js) : en
+     périmètre « Essentiel », les pages Signature/Prestige FULL disparaissent
+     de la navigation sans casser la mise en page. */
+  :root[data-package="essentiel"] [data-min-package] { display: none !important; }
+  /* Estimer mon bien : formulaire simple en Essentiel, simulateur complet en Signature/FULL. */
+  :root[data-package="essentiel"] [data-tier="full"] { display: none !important; }
+  :root:not([data-package="essentiel"]) [data-tier="simple"] { display: none !important; }
+
+  /* Logotype : blanc sur les headers à fond photo, doré une fois le menu
+     scrollé (fond clair), noir sur les pages à header clair dès le départ. */
+  .brand-mark-blanc { opacity: 1; }
+  .brand-mark-dore, .brand-mark-noir { opacity: 0; }
+  .brand-mark-blanc, .brand-mark-dore, .brand-mark-noir { transition: opacity .6s var(--ease-lux); }
+  #siteHeader[data-tone="dark"]:not(.is-scrolled) .brand-mark-blanc { opacity: 0; }
+  #siteHeader[data-tone="dark"]:not(.is-scrolled) .brand-mark-noir { opacity: 1; }
+  #siteHeader.is-scrolled .brand-mark-blanc,
+  #siteHeader.is-scrolled .brand-mark-noir { opacity: 0; }
+  #siteHeader.is-scrolled .brand-mark-dore { opacity: 1; }
+  #siteHeader.is-scrolled .brand-word { color: #A47E5E; }
+  #siteHeader[data-scroll="dark"].is-scrolled .brand-mark-dore { opacity: 0; }
+  #siteHeader[data-scroll="dark"].is-scrolled .brand-mark-blanc { opacity: 1; }
+  #siteHeader[data-scroll="dark"].is-scrolled .brand-word { color: inherit; }
+</style>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="assets/js/package.js?v=1790456199"></script>
+<script src="assets/js/main.js?v=1790456199"></script>
+</body>
+</html>

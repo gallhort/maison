@@ -1,0 +1,122 @@
+{{HEAD:Journal — Triade Concept Immo|Regards sur l’immobilier de prestige, l’architecture et le Feng Shui : le journal de Triade Concept Immo.}}
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+<body>
+{{HEADERFLAT:journal}}
+
+<main>
+  <!-- =====================================================================
+       BARRE COMPACTE — masthead + rubriques sur une seule ligne
+       ===================================================================== -->
+  <section class="shell jr-dash-b reveal flex flex-col gap-3 py-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-x-8 sm:gap-y-2" style="--d:80ms">
+    <div class="flex min-w-0 items-center gap-4">
+      <span class="jr-mast shrink-0 text-2xl">Journal</span>
+      <span class="hidden h-4 w-px shrink-0 bg-moka/15 sm:block"></span>
+      <nav class="no-scrollbar flex min-w-0 flex-nowrap items-center gap-x-3 gap-y-1 overflow-x-auto" aria-label="Rubriques du journal">
+        <a href="#" class="jr-cat is-active shrink-0">Tous</a>
+        <span class="shrink-0 text-moka/20">/</span>
+        <a href="#" class="jr-cat shrink-0">Marché</a>
+        <span class="shrink-0 text-moka/20">/</span>
+        <a href="#" class="jr-cat shrink-0">Architecture</a>
+        <span class="shrink-0 text-moka/20">/</span>
+        <a href="#" class="jr-cat shrink-0">Feng Shui</a>
+        <span class="shrink-0 text-moka/20">/</span>
+        <a href="#" class="jr-cat shrink-0">Patrimoine</a>
+      </nav>
+    </div>
+    <p class="jr-eyebrow shrink-0">N° 12 — Automne 2026</p>
+  </section>
+
+  <!-- =====================================================================
+       HERO — article vedette : titre superposé, lisible sur l’image
+       tient toujours dans l’écran (hauteur basée sur la fenêtre, pas un ratio fixe)
+       ===================================================================== -->
+  <section class="shell pb-20 pt-3 md:pb-28">
+    <a href="actualite.html" class="group card reveal-img block h-[62vh] max-h-[620px] min-h-[340px]">
+      <img src="assets/img/villa-3.webp" alt="Villa contemporaine surplombant la Méditerranée au coucher du soleil" class="card-media" loading="lazy" />
+      <div class="card-scrim"></div>
+      <div class="absolute inset-x-5 top-5 md:inset-x-9 md:top-9">
+        <span class="pill-glass">Marché</span>
+      </div>
+      <div class="absolute inset-x-5 bottom-6 max-w-3xl text-white md:inset-x-9 md:bottom-10">
+        <p class="text-xs font-semibold uppercase tracking-[.14em] text-white/70">01 — 12 min de lecture · 18 sept. 2026</p>
+        <h2 class="jr-mast mt-4 text-[10vw] leading-[.86] sm:text-[6vw] lg:text-[4.25rem]">Le off-market domine le très haut de gamme</h2>
+        <p class="mt-4 hidden max-w-lg text-[15px] leading-relaxed text-white/80 sm:block">62 % des transactions accompagnées par Triade Concept Immo en 2026 n’ont jamais été publiées.</p>
+        <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-white underline decoration-white/40 underline-offset-4 group-hover:decoration-white">Lire l’article <i data-lucide="arrow-up-right" class="h-4 w-4 transition-transform duration-500 ease-lux group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i></span>
+      </div>
+    </a>
+  </section>
+
+  <!-- =====================================================================
+       ARTICLES — blocs côte à côte, alternés
+       ===================================================================== -->
+  <section class="shell pb-24 md:pb-36">
+    <a href="actualite-chalet.html" class="jr-dash group grid gap-6 py-14 md:grid-cols-12 md:items-center md:gap-10">
+      <div class="md:col-span-5">
+        <div class="aspect-[4/3] overflow-hidden rounded-sm"><img src="assets/img/prop-megeve.webp" alt="Chalet contemporain à Megève sous la neige" class="h-full w-full object-cover transition duration-[1200ms] ease-lux group-hover:scale-[1.03]" loading="lazy" /></div>
+      </div>
+      <div class="md:col-span-6 md:col-start-7">
+        <p class="jr-meta">02 — Architecture · 8 min</p>
+        <h3 class="jr-mast mt-3 text-[8vw] leading-[.9] sm:text-[2.5rem]">Le chalet contemporain, entre bois brut et verre</h3>
+        <p class="mt-4 max-w-sm text-sm leading-relaxed text-moka/60">Comment les codes du chalet alpin se réinventent à Megève sans renier la montagne.</p>
+      </div>
+    </a>
+
+    <a href="actualite-feng-shui.html" class="jr-dash group grid gap-6 py-14 md:grid-cols-12 md:items-center md:gap-10">
+      <div class="md:col-span-6 md:order-2">
+        <div class="aspect-[4/3] overflow-hidden rounded-sm"><img src="assets/img/fengshui-hero.webp" alt="Salon aux murs de chaux ouvert sur un jardin d’oliviers" class="h-full w-full object-cover transition duration-[1200ms] ease-lux group-hover:scale-[1.03]" loading="lazy" /></div>
+      </div>
+      <div class="md:col-span-5 md:order-1">
+        <p class="jr-meta">03 — Feng Shui · 6 min</p>
+        <h3 class="jr-mast mt-3 text-[8vw] leading-[.9] sm:text-[2.5rem]">Cinq signes qu’une maison respire mal</h3>
+        <p class="mt-4 max-w-sm text-sm leading-relaxed text-moka/60">Claire Vasseur détaille les déséquilibres les plus fréquents observés en consultation.</p>
+      </div>
+    </a>
+
+    <a href="actualite-bastide.html" class="jr-dash group grid gap-6 py-14 md:grid-cols-12 md:items-center md:gap-10">
+      <div class="md:col-span-5">
+        <div class="aspect-[4/3] overflow-hidden rounded-sm"><img src="assets/img/prop-luberon.webp" alt="Bastide en pierre du Luberon entourée d’oliviers" class="h-full w-full object-cover transition duration-[1200ms] ease-lux group-hover:scale-[1.03]" loading="lazy" /></div>
+      </div>
+      <div class="md:col-span-6 md:col-start-7">
+        <p class="jr-meta">04 — Patrimoine · 10 min</p>
+        <h3 class="jr-mast mt-3 text-[8vw] leading-[.9] sm:text-[2.5rem]">Transmettre une bastide familiale sans la vendre</h3>
+        <p class="mt-4 max-w-sm text-sm leading-relaxed text-moka/60">Démembrement, SCI, pacte Dutreil : trois montages pour garder la maison dans la famille.</p>
+      </div>
+    </a>
+
+    <a href="actualite-paris.html" class="jr-dash group grid gap-6 py-14 md:grid-cols-12 md:items-center md:gap-10">
+      <div class="md:col-span-6 md:order-2">
+        <div class="aspect-[4/3] overflow-hidden rounded-sm"><img src="assets/img/prop-paris.webp" alt="Penthouse haussmannien avec vue sur la tour Eiffel" class="h-full w-full object-cover transition duration-[1200ms] ease-lux group-hover:scale-[1.03]" loading="lazy" /></div>
+      </div>
+      <div class="md:col-span-5 md:order-1">
+        <p class="jr-meta">05 — Marché · 7 min</p>
+        <h3 class="jr-mast mt-3 text-[8vw] leading-[.9] sm:text-[2.5rem]">Paris VIII<sup class="text-[.5em]">e</sup>, le retour des acquéreurs internationaux</h3>
+        <p class="mt-4 max-w-sm text-sm leading-relaxed text-moka/60">Après deux années attentistes, la demande repart sur les penthouses avec terrasse.</p>
+      </div>
+    </a>
+
+    <a href="actualite-biarritz.html" class="jr-dash group grid gap-6 py-14 md:grid-cols-12 md:items-center md:gap-10">
+      <div class="md:col-span-5">
+        <div class="aspect-[4/3] overflow-hidden rounded-sm"><img src="assets/img/prop-biarritz.webp" alt="Villa contemporaine face à l’océan à Biarritz" class="h-full w-full object-cover transition duration-[1200ms] ease-lux group-hover:scale-[1.03]" loading="lazy" /></div>
+      </div>
+      <div class="md:col-span-6 md:col-start-7">
+        <p class="jr-meta">06 — Architecture · 9 min</p>
+        <h3 class="jr-mast mt-3 text-[8vw] leading-[.9] sm:text-[2.5rem]">Biarritz, la façade Art déco face à l’océan</h3>
+        <p class="mt-4 max-w-sm text-sm leading-relaxed text-moka/60">Rénover sans trahir : le pari des dernières villas Art déco du Pays basque.</p>
+      </div>
+    </a>
+
+    <a href="actualite-chambre.html" class="group grid gap-6 py-14 md:grid-cols-12 md:items-center md:gap-10">
+      <div class="md:col-span-6 md:order-2">
+        <div class="aspect-[4/3] overflow-hidden rounded-sm"><img src="assets/img/standard-3.webp" alt="Chambre apaisante aux murs de chaux et fenêtre en arche" class="h-full w-full object-cover transition duration-[1200ms] ease-lux group-hover:scale-[1.03]" loading="lazy" /></div>
+      </div>
+      <div class="md:col-span-5 md:order-1">
+        <p class="jr-meta">07 — Feng Shui · 5 min</p>
+        <h3 class="jr-mast mt-3 text-[8vw] leading-[.9] sm:text-[2.5rem]">La chambre, premier secteur à harmoniser</h3>
+        <p class="mt-4 max-w-sm text-sm leading-relaxed text-moka/60">Orientation du lit, matières, lumière du matin : les fondamentaux avant toute déco.</p>
+      </div>
+    </a>
+  </section>
+</main>
+
+{{FOOTER}}
+{{TAIL}}

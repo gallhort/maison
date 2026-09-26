@@ -1,0 +1,127 @@
+{{HEAD:Acheter — Demeures d’exception · Triade Concept Immo|Parcourez la sélection Triade Concept Immo : villas, penthouses, chalets et hôtels particuliers d’exception en France.}}
+<body>
+{{HEADER:dark|light|buy}}
+
+<main class="pt-28 md:pt-32">
+  <!-- =====================================================================
+       CATALOGUE — filtres pilules, tri, vue grille / liste, état vide
+       ===================================================================== -->
+  <section class="shell" aria-labelledby="cat-title">
+    <div class="grid gap-8 lg:grid-cols-12 lg:items-end">
+      <div class="lg:col-span-8">
+        <p class="eyebrow reveal text-moka/50">N° 04 — Acheter</p>
+        <h1 id="cat-title" class="reveal mt-4 text-h1">Des demeures qui se <em>racontent</em>,<br class="hidden md:block" /> avant de se visiter.</h1>
+      </div>
+      <p class="reveal max-w-md text-[15px] leading-relaxed text-moka/65 lg:col-span-4" style="--d:120ms">
+        Chaque adresse est visitée, photographiée et rédigée par nos équipes. Une partie du portefeuille reste confidentielle : demandez l’accès à la Collection Privée.
+      </p>
+    </div>
+  </section>
+
+  <!-- Barre de filtres collante -->
+  <div class="sticky top-[88px] z-30 mt-10 md:top-[92px]" data-cat-bar>
+    <div class="shell">
+      <div class="rounded-3xl border border-moka/[.06] bg-ivoire/85 p-2 shadow-float backdrop-blur-xl md:rounded-full">
+        <div class="flex flex-col gap-2 md:flex-row md:items-center">
+          <!-- Types -->
+          <div class="no-scrollbar flex gap-1.5 overflow-x-auto md:flex-1" role="group" aria-label="Type de bien" data-filter-type>
+            <button type="button" class="chip shrink-0 border-transparent" aria-pressed="true" data-type="">Tout</button>
+            <button type="button" class="chip shrink-0 border-transparent" aria-pressed="false" data-type="Villa">Villas</button>
+            <button type="button" class="chip shrink-0 border-transparent" aria-pressed="false" data-type="Appartement">Appartements</button>
+            <button type="button" class="chip shrink-0 border-transparent" aria-pressed="false" data-type="Bastide">Bastides</button>
+          </div>
+          <div class="flex items-center gap-2">
+            <label class="sr-only" for="f-region">Région</label>
+            <select id="f-region" class="cat-select" data-filter-region>
+              <option value="">Toutes régions</option>
+              <option>Côte d’Azur</option>
+              <option>Provence</option>
+              <option>Côte Basque</option>
+            </select>
+            <button type="button" class="pill-line shrink-0 hover:border-moka/30" data-toggle-more aria-expanded="false" aria-controls="cat-more"><i data-lucide="sliders-horizontal" class="h-4 w-4"></i><span class="hidden sm:inline">Plus de filtres</span><span class="cat-badge" data-more-count hidden></span></button>
+          </div>
+        </div>
+        <!-- Filtres avancés -->
+        <div id="cat-more" class="cat-more" data-more>
+          <div>
+            <div class="grid gap-6 px-4 pb-4 pt-5 md:grid-cols-3 md:px-6">
+              <div>
+                <div class="flex items-baseline justify-between"><p class="eyebrow text-moka/50">Budget maximum</p><output class="font-serif text-2xl" data-budget-out>Sans limite</output></div>
+                <input type="range" class="lux-range mt-4" min="2" max="20" step="0.5" value="20" data-filter-budget aria-label="Budget maximum en millions d’euros" />
+                <div class="mt-2 flex justify-between text-[11px] text-moka/40"><span>2 M€</span><span>20 M€ +</span></div>
+              </div>
+              <div>
+                <p class="eyebrow text-moka/50">Pièces minimum</p>
+                <div class="mt-4 flex flex-wrap gap-1.5" role="group" aria-label="Pièces minimum" data-filter-rooms>
+                  <button type="button" class="chip" aria-pressed="true" data-rooms="0">Indifférent</button>
+                  <button type="button" class="chip" aria-pressed="false" data-rooms="5">5 +</button>
+                  <button type="button" class="chip" aria-pressed="false" data-rooms="7">7 +</button>
+                  <button type="button" class="chip" aria-pressed="false" data-rooms="10">10 +</button>
+                </div>
+              </div>
+              <div>
+                <p class="eyebrow text-moka/50">Prestations</p>
+                <div class="mt-4 flex flex-wrap gap-1.5" role="group" aria-label="Prestations" data-filter-tags>
+                  <button type="button" class="chip" aria-pressed="false" data-tag="Piscine">Piscine</button>
+                  <button type="button" class="chip" aria-pressed="false" data-tag="Vue mer">Vue mer</button>
+                  <button type="button" class="chip" aria-pressed="false" data-tag="Jardin">Jardin</button>
+                  <button type="button" class="chip" aria-pressed="false" data-tag="Feng Shui">Étude Feng Shui</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- En-tête des résultats -->
+  <section class="shell mt-10 pb-24 md:pb-32" aria-live="polite">
+    <div class="flex flex-wrap items-center justify-between gap-4 border-b border-moka/10 pb-5">
+      <p class="text-sm text-moka/60"><span class="font-serif text-3xl text-moka" data-cat-count>8</span> <span data-count-label>demeures</span> <span class="hidden text-moka/40 sm:inline" data-active-filters></span></p>
+      <div class="flex items-center gap-2">
+        <label class="sr-only" for="f-sort">Trier</label>
+        <select id="f-sort" class="cat-select" data-sort>
+          <option value="recent">Plus récentes</option>
+          <option value="price-desc">Prix décroissant</option>
+          <option value="price-asc">Prix croissant</option>
+          <option value="surface">Surface</option>
+        </select>
+        <div class="flex rounded-full border border-moka/10 bg-white p-1" role="group" aria-label="Affichage">
+          <button type="button" class="view-btn" aria-pressed="true" data-view="grid" aria-label="Vue grille"><i data-lucide="layout-grid" class="h-4 w-4"></i></button>
+          <button type="button" class="view-btn" aria-pressed="false" data-view="list" aria-label="Vue liste"><i data-lucide="rows-3" class="h-4 w-4"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-grid mt-8" data-results data-view-mode="grid"></div>
+
+    <!-- État vide -->
+    <div class="hidden rounded-3xl bg-sable/60 px-6 py-20 text-center" data-empty>
+      <svg class="mx-auto h-14 w-14 text-moka/40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M11 32V18a9 9 0 0 1 18 0v14"/><path d="M5 32h30"/></svg>
+      <h2 class="mt-6 font-serif text-3xl">Aucune demeure <em>visible</em> pour ces critères.</h2>
+      <p class="mx-auto mt-3 max-w-md text-sm leading-relaxed text-moka/60">Une partie de nos biens n’est présentée qu’en privé. Élargissez votre recherche ou confiez-nous vos critères.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <button type="button" class="btn-dark" data-reset>Réinitialiser les filtres</button>
+        <a href="rendez-vous.html" class="btn-ghost">Recherche confidentielle</a>
+      </div>
+    </div>
+
+    <!-- Encart alerte -->
+    <div class="card reveal mt-16 grid gap-8 bg-moka p-8 text-ivoire md:grid-cols-12 md:items-center md:p-12">
+      <div class="md:col-span-7">
+        <p class="eyebrow text-ivoire/50">Alerte privée</p>
+        <h2 class="mt-4 font-serif text-4xl leading-tight md:text-5xl">Soyez averti <em>avant</em> la mise en ligne.</h2>
+        <p class="mt-4 max-w-md text-sm leading-relaxed text-ivoire/60">Près d’un tiers de nos ventes se conclut en off-market. Recevez les nouvelles adresses correspondant à vos critères, 72 heures avant leur publication.</p>
+      </div>
+      <form class="flex flex-col gap-3 sm:flex-row md:col-span-5" data-fake-submit="Alerte créée — vous serez prévenu en priorité">
+        <label class="sr-only" for="alert-mail">E-mail</label>
+        <input id="alert-mail" type="email" required placeholder="Votre e-mail" class="w-full rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm text-ivoire outline-none placeholder:text-ivoire/40 focus:border-white/40" />
+        <button class="btn-light shrink-0">Créer l’alerte</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+{{FOOTER}}
+{{TAIL}}

@@ -1,0 +1,144 @@
+{{HEAD:Prendre rendez-vous — Triade Concept Immo|Réservez un rendez-vous avec un conseiller Triade Concept Immo : à l’agence d’Aix-en-Provence, à domicile ou en visio.}}
+<body>
+{{HEADER:dark|light|rdv}}
+
+<main class="pt-32 md:pt-40">
+  <!-- En-tête -->
+  <section class="shell">
+    <div class="grid items-end gap-8 lg:grid-cols-12">
+      <div class="lg:col-span-7">
+        <p class="eyebrow reveal flex items-center gap-3 text-moka/50"><span class="h-px w-10 bg-moka/30"></span>Rendez-vous</p>
+        <h1 class="reveal mt-6 text-h1" style="--d:100ms">Réservons un <em>moment</em> ensemble.</h1>
+      </div>
+      <div class="reveal flex flex-wrap gap-2 lg:col-span-5 lg:justify-end" style="--d:200ms">
+        <a href="tel:+33442961020" class="pill-line"><i data-lucide="phone" class="h-3.5 w-3.5"></i> +33 4 42 96 10 20</a>
+        <a href="mailto:conciergerie@triadeconceptimmo.fr" class="pill-line"><i data-lucide="mail" class="h-3.5 w-3.5"></i> conciergerie@triadeconceptimmo.fr</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       RÉSERVATION — formulaire en sections + récapitulatif collant
+       ===================================================================== -->
+  <section class="px-3 pt-12 md:px-5 md:pt-16" data-rdv>
+    <div class="mx-auto grid max-w-shell gap-3 lg:grid-cols-12 lg:gap-4">
+      <form class="rounded-3xl bg-white p-5 sm:p-8 lg:col-span-8 lg:p-12" data-rdv-form novalidate>
+
+        <!-- 1 · Motif -->
+        <div class="rdv-block">
+          <p class="rdv-label"><span>01</span> Objet du rendez-vous</p>
+          <div class="mt-6 grid grid-cols-2 gap-2.5 md:grid-cols-4">
+            <label class="opt-card opt-card--sm"><input type="radio" name="motif" value="Acquérir une demeure" checked /><i data-lucide="key-round" class="opt-ico"></i><span class="opt-title">Acquérir</span></label>
+            <label class="opt-card opt-card--sm"><input type="radio" name="motif" value="Vendre une demeure" /><i data-lucide="signature" class="opt-ico"></i><span class="opt-title">Vendre</span></label>
+            <label class="opt-card opt-card--sm"><input type="radio" name="motif" value="Visite d’expertise" /><i data-lucide="ruler" class="opt-ico"></i><span class="opt-title">Faire estimer</span></label>
+            <label class="opt-card opt-card--sm"><input type="radio" name="motif" value="Consultation Feng Shui" /><i data-lucide="leaf" class="opt-ico"></i><span class="opt-title">Feng Shui</span></label>
+          </div>
+        </div>
+
+        <!-- 2 · Format -->
+        <div class="rdv-block">
+          <p class="rdv-label"><span>02</span> Où souhaitez-vous nous rencontrer ?</p>
+          <div class="mt-6 grid gap-2.5 md:grid-cols-3">
+            <label class="opt-card opt-card--row"><input type="radio" name="format" value="En agence" checked /><i data-lucide="armchair" class="opt-ico"></i><span class="opt-title">Agence Aix-en-Provence</span><span class="opt-sub">67 Cours Mirabeau</span></label>
+            <label class="opt-card opt-card--row"><input type="radio" name="format" value="Chez vous" /><i data-lucide="house" class="opt-ico"></i><span class="opt-title">À domicile</span><span class="opt-sub">Ou sur le bien concerné</span></label>
+            <label class="opt-card opt-card--row"><input type="radio" name="format" value="En visio" /><i data-lucide="video" class="opt-ico"></i><span class="opt-title">En visio</span><span class="opt-sub">Lien privé envoyé par e-mail</span></label>
+          </div>
+          <div class="mt-6" data-office-wrap>
+            <p class="eyebrow text-moka/45">Adresse</p>
+            <p class="mt-3 text-sm text-moka/70">67 Cours Mirabeau, 13100 Aix-en-Provence</p>
+            <input type="radio" name="bureau" value="aix" data-label="Aix-en-Provence" checked class="sr-only" />
+          </div>
+        </div>
+
+        <!-- 3 · Date & heure -->
+        <div class="rdv-block">
+          <p class="rdv-label"><span>03</span> Date & heure</p>
+          <div class="mt-6 grid gap-6 md:grid-cols-[1.25fr_1fr]">
+            <div class="rounded-3xl bg-ivoire p-5 md:p-6">
+              <div class="flex items-center justify-between">
+                <p class="font-serif text-2xl capitalize" data-cal-title>—</p>
+                <div class="flex gap-1.5">
+                  <button type="button" class="cal-nav" data-cal-prev aria-label="Mois précédent"><i data-lucide="chevron-left" class="h-4 w-4"></i></button>
+                  <button type="button" class="cal-nav" data-cal-next aria-label="Mois suivant"><i data-lucide="chevron-right" class="h-4 w-4"></i></button>
+                </div>
+              </div>
+              <div class="mt-5 grid grid-cols-7 text-center text-[11px] font-semibold uppercase tracking-wider text-moka/40"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+              <div class="mt-2 grid grid-cols-7 gap-1" data-cal-grid role="grid" aria-label="Choisir une date"></div>
+              <p class="mt-4 flex items-center gap-2 text-[11px] text-moka/45"><span class="h-1.5 w-1.5 rounded-full bg-sage"></span> Peu de créneaux restants</p>
+            </div>
+            <div>
+              <p class="eyebrow text-moka/45" data-slot-title>Choisissez une date</p>
+              <div class="mt-4 grid grid-cols-2 gap-2" data-slots></div>
+              <p class="mt-4 text-xs text-moka/45" data-slot-hint>Les créneaux s’affichent après le choix d’une date.</p>
+            </div>
+          </div>
+          <p class="est-error rdv-err" data-err="slot">Choisissez une date et un créneau.</p>
+        </div>
+
+        <!-- 4 · Coordonnées -->
+        <div class="rdv-block !border-0 !pb-0">
+          <p class="rdv-label"><span>04</span> Vos coordonnées</p>
+          <div class="mt-6 grid gap-3 md:grid-cols-2">
+            <div class="float-field"><input id="rdv-name" name="fullname" placeholder=" " autocomplete="name" required /><label for="rdv-name">Nom complet *</label></div>
+            <div class="float-field"><input id="rdv-mail" type="email" name="email" placeholder=" " autocomplete="email" required /><label for="rdv-mail">E-mail *</label></div>
+            <div class="float-field"><input id="rdv-tel" type="tel" name="tel" placeholder=" " autocomplete="tel" /><label for="rdv-tel">Téléphone</label></div>
+            <div class="float-field"><input id="rdv-ref" name="ref" placeholder=" " /><label for="rdv-ref">Référence d’un bien (facultatif)</label></div>
+          </div>
+          <div class="float-field float-field--area mt-3"><textarea id="rdv-msg" name="msg" rows="4" placeholder=" "></textarea><label for="rdv-msg">Quelques mots sur votre projet</label></div>
+          <p class="est-error rdv-err" data-err="contact">Merci d’indiquer votre nom et un e-mail valide.</p>
+        </div>
+      </form>
+
+      <!-- Récapitulatif collant -->
+      <aside class="lg:col-span-4">
+        <div class="rounded-3xl bg-moka p-6 text-ivoire md:p-8 lg:sticky lg:top-24" data-rdv-recap>
+          <p class="eyebrow text-ivoire/50">Votre rendez-vous</p>
+          <div class="mt-6 flex items-center gap-4">
+            <img src="assets/img/fondatrice.webp" alt="" class="h-14 w-14 rounded-full object-cover object-top" data-r-img />
+            <div><p class="font-serif text-2xl" data-r-agent>Hélène de Varennes</p><p class="text-xs text-ivoire/55" data-r-role>Fondatrice · Paris</p></div>
+          </div>
+          <dl class="mt-8 space-y-4 border-t border-white/10 pt-6 text-sm">
+            <div class="flex justify-between gap-4"><dt class="text-ivoire/50">Objet</dt><dd class="text-right" data-r="motif">—</dd></div>
+            <div class="flex justify-between gap-4"><dt class="text-ivoire/50">Lieu</dt><dd class="text-right" data-r="lieu">—</dd></div>
+            <div class="flex justify-between gap-4"><dt class="text-ivoire/50">Date</dt><dd class="text-right" data-r="date">À choisir</dd></div>
+            <div class="flex justify-between gap-4"><dt class="text-ivoire/50">Heure</dt><dd class="text-right" data-r="slot">—</dd></div>
+            <div class="flex justify-between gap-4"><dt class="text-ivoire/50">Durée</dt><dd class="text-right" data-r="dur">1 h</dd></div>
+          </dl>
+          <button type="button" class="btn-light mt-8 w-full justify-center" data-rdv-submit>Confirmer le rendez-vous <i data-lucide="arrow-right" class="i i-go h-4 w-4"></i></button>
+          <p class="mt-4 text-center text-[11px] text-ivoire/45">Annulation libre jusqu’à 24 h avant.</p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Confirmation -->
+    <div class="rdv-done mx-auto max-w-shell" data-rdv-done hidden>
+      <div class="grid overflow-hidden rounded-3xl bg-white lg:grid-cols-2">
+        <div class="relative min-h-[360px]"><img src="assets/img/maison-hero.webp" alt="" class="absolute inset-0 h-full w-full object-cover" data-done-img /></div>
+        <div class="flex flex-col justify-center p-8 md:p-14">
+          <span class="grid h-14 w-14 place-items-center rounded-full bg-sage text-ivoire"><svg viewBox="0 0 24 24" class="h-6 w-6 rdv-check" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></span>
+          <p class="eyebrow mt-8 text-moka/45">Rendez-vous confirmé</p>
+          <h2 class="mt-3 font-serif text-[clamp(2.2rem,3.4vw,3.2rem)] leading-tight">À <em data-d="date">bientôt</em>.</h2>
+          <p class="mt-4 text-[15px] leading-relaxed text-moka/65" data-d="text">—</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <button type="button" class="btn-dark" onclick="oreeToast('Invitation ajoutée à votre calendrier')"><i data-lucide="calendar-plus" class="h-4 w-4"></i> Ajouter au calendrier</button>
+            <button type="button" class="btn-ghost" data-rdv-again>Modifier</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bureaux -->
+  <section class="shell py-24 md:py-32" aria-labelledby="addr-title">
+    <div class="flex flex-wrap items-end justify-between gap-6">
+      <h2 id="addr-title" class="reveal text-h2">Notre <em>adresse.</em></h2>
+      <a href="maison.html#bureaux" class="btn-ghost reveal">Découvrir la Maison <i data-lucide="arrow-right" class="i i-go h-4 w-4"></i></a>
+    </div>
+    <div class="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <article class="addr-card reveal"><img src="assets/img/maison-hero.webp" alt="" loading="lazy" /><div class="p-6"><h3 class="font-serif text-2xl">Aix-en-Provence</h3><p class="mt-2 text-sm text-moka/60">67 Cours Mirabeau<br />Lun.–sam. · 9 h 30 – 19 h</p></div></article>
+    </div>
+  </section>
+</main>
+
+{{FOOTER}}
+{{TAIL}}
