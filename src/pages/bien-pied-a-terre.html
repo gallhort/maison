@@ -1,0 +1,221 @@
+{{HEAD:Pied-à-terre historique — Aix-en-Provence · Maison Orée|Appartement de 42 m² au cœur du centre historique d’Aix-en-Provence, face au Palais de Justice. Moulures d’origine, belle hauteur sous plafond.}}
+<body>
+{{HEADER:dark|light|buy}}
+
+<main class="pt-28 md:pt-32">
+  <!-- =====================================================================
+       GABARIT ENTRÉE DE GAMME — même exigence éditoriale, échelle différente
+       (dupliqué depuis bien-standard.html, voir plan étape audit Paquet 3)
+       ===================================================================== -->
+  <div class="shell">
+    <!-- Fil d'Ariane + actions -->
+    <div class="flex flex-wrap items-center justify-between gap-4">
+      <nav class="flex items-center gap-2 text-xs text-moka/50" aria-label="Fil d’Ariane">
+        <a href="index.html" class="hover:text-moka">Accueil</a><i data-lucide="chevron-right" class="h-3 w-3"></i>
+        <a href="#" class="hover:text-moka">Aix-en-Provence</a><i data-lucide="chevron-right" class="h-3 w-3"></i>
+        <span class="text-moka">Réf. TCI-13-0842</span>
+      </nav>
+      <div class="flex gap-2">
+        <button type="button" class="pill-line hover:border-moka/30" onclick="navigator.clipboard?.writeText(location.href);oreeToast('Lien copié dans le presse-papiers')"><i data-lucide="share-2" class="h-4 w-4"></i> Partager</button>
+        <button type="button" data-fav aria-pressed="false" class="pill-line hover:border-moka/30"><i data-lucide="heart" class="h-4 w-4"></i> Sauvegarder</button>
+      </div>
+    </div>
+
+    <!-- Galerie -->
+    <section class="mt-6 grid gap-3 lg:h-[62vh] lg:min-h-[480px] lg:grid-cols-12" aria-label="Galerie">
+      <div class="group card reveal-img h-[48vh] min-h-[320px] lg:col-span-8 lg:h-auto" data-lb="Séjour et moulures d’origine">
+        <img src="assets/img/prop-marais.webp" alt="Séjour d’un appartement ancien avec moulures et parquet, centre historique d’Aix-en-Provence" class="card-media" />
+        <div class="absolute left-4 top-4 z-10 flex gap-2"><span class="pill bg-ivoire/90 text-moka backdrop-blur"><i data-lucide="landmark" class="h-3.5 w-3.5"></i> Centre historique</span></div>
+        <button type="button" data-lb-open class="pill absolute bottom-4 left-4 z-10 bg-ivoire/90 text-moka backdrop-blur transition hover:bg-ivoire"><i data-lucide="images" class="h-4 w-4"></i> Ouvrir la galerie</button>
+      </div>
+      <div class="grid grid-cols-2 gap-3 lg:col-span-4 lg:grid-cols-1 lg:grid-rows-2">
+        <div class="group card reveal-img h-48 lg:h-auto" style="--d:80ms" data-lb="Chambre"><img src="assets/img/standard-3.webp" alt="Chambre aux murs de chaux, fenêtre haute sur cour" class="card-media" /></div>
+        <div class="group card reveal-img h-48 lg:h-auto" style="--d:160ms" data-lb="Façade sur le Palais de Justice"><img src="assets/img/standard-2.webp" alt="Immeuble ancien en pierre de taille, centre historique d’Aix-en-Provence" class="card-media" /></div>
+      </div>
+    </section>
+
+    <!-- Layout 2 colonnes -->
+    <div class="mt-14 grid gap-14 lg:grid-cols-12 lg:gap-16">
+      <!-- Colonne principale -->
+      <article class="lg:col-span-8">
+        <header class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <p class="eyebrow reveal flex items-center gap-2 text-moka/50"><i data-lucide="map-pin" class="h-3.5 w-3.5"></i> Centre historique · Aix-en-Provence</p>
+            <h1 class="reveal mt-4 text-h1">Pied-à-terre <em>historique</em>, face au Palais de Justice</h1>
+          </div>
+          <div class="reveal shrink-0 md:text-right">
+            <p class="font-serif text-5xl">280 000 €</p>
+            <p class="mt-1 text-xs text-moka/50">Honoraires inclus · 6 667 €/m²</p>
+          </div>
+        </header>
+
+        <!-- Caractéristiques en pilules -->
+        <ul class="reveal mt-10 flex flex-wrap gap-2" aria-label="Caractéristiques principales">
+          <li class="pill-line"><i data-lucide="maximize" class="h-4 w-4 text-sage-600"></i> 42 m²</li>
+          <li class="pill-line"><i data-lucide="layout-grid" class="h-4 w-4 text-sage-600"></i> 2 pièces</li>
+          <li class="pill-line"><i data-lucide="bed-double" class="h-4 w-4 text-sage-600"></i> 1 chambre</li>
+          <li class="pill-line"><i data-lucide="bath" class="h-4 w-4 text-sage-600"></i> 1 salle de bains</li>
+          <li class="pill-line"><i data-lucide="building" class="h-4 w-4 text-sage-600"></i> 2<sup>e</sup> étage, sans ascenseur</li>
+          <li class="pill-line"><i data-lucide="landmark" class="h-4 w-4 text-sage-600"></i> Immeuble XVIII<sup>e</sup></li>
+          <li class="pill-line"><span class="grid h-5 w-5 place-items-center rounded-md bg-[#D9A441] text-[11px] font-semibold text-white">D</span> DPE</li>
+        </ul>
+
+        <div class="rule my-12"></div>
+
+        <!-- Description -->
+        <section class="grid gap-8 md:grid-cols-[200px_1fr]">
+          <h2 class="eyebrow reveal text-moka/50">Le bien</h2>
+          <div class="reveal">
+            <div id="desc" class="clamp-text space-y-4 text-[15px] leading-[1.8] text-moka/75">
+              <p class="font-serif text-2xl leading-snug text-moka">Au deuxième étage d’un hôtel particulier du XVIII<sup>e</sup> siècle, à deux pas du Palais de Justice, un appartement traversant qui a conservé l’essentiel de son caractère d’origine.</p>
+              <p>Moulures au plafond, cheminée en marbre condamnée mais conservée, parquet point de Hongrie dans la pièce de vie : le bien n’a jamais été dénaturé par une rénovation trop appuyée. Une hauteur sous plafond de 3,20 m accentue la sensation d’espace malgré une surface compacte.</p>
+              <p>La chambre, en second jour sur une cour intérieure calme, bénéficie d’une exposition qui la préserve des fortes chaleurs estivales — un atout rare dans le centre ancien.</p>
+              <p>Un emplacement de cette rareté, à cette échelle de prix, se représente peu souvent dans le centre historique : la plupart des transactions comparables se concluent avant même leur publication.</p>
+            </div>
+            <button type="button" data-expand="desc" aria-expanded="false" class="mt-5 inline-flex items-center gap-2 text-sm font-medium underline decoration-moka/20 underline-offset-8 hover:decoration-moka"><span>Lire la suite</span> <i data-lucide="plus" class="h-4 w-4"></i></button>
+          </div>
+        </section>
+
+        <div class="rule my-12"></div>
+
+        <!-- Prestations -->
+        <section class="grid gap-8 md:grid-cols-[200px_1fr]">
+          <h2 class="eyebrow reveal text-moka/50">Prestations</h2>
+          <ul class="reveal grid gap-x-8 gap-y-4 text-[15px] sm:grid-cols-2">
+            <li class="flex items-center gap-3"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage-50 text-sage-700"><i data-lucide="flame" class="h-4 w-4"></i></span>Cheminée en marbre d’origine</li>
+            <li class="flex items-center gap-3"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage-50 text-sage-700"><i data-lucide="layers" class="h-4 w-4"></i></span>Parquet point de Hongrie</li>
+            <li class="flex items-center gap-3"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage-50 text-sage-700"><i data-lucide="ruler" class="h-4 w-4"></i></span>Hauteur sous plafond 3,20 m</li>
+            <li class="flex items-center gap-3"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage-50 text-sage-700"><i data-lucide="sun" class="h-4 w-4"></i></span>Double exposition, traversant</li>
+            <li class="flex items-center gap-3"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage-50 text-sage-700"><i data-lucide="archive" class="h-4 w-4"></i></span>Cave privative</li>
+            <li class="flex items-center gap-3"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage-50 text-sage-700"><i data-lucide="bike" class="h-4 w-4"></i></span>Local à vélos dans la copropriété</li>
+          </ul>
+        </section>
+
+        <div class="rule my-12"></div>
+
+        <!-- Surfaces -->
+        <section class="grid gap-8 md:grid-cols-[200px_1fr]">
+          <h2 class="eyebrow reveal text-moka/50">Surfaces</h2>
+          <div class="reveal overflow-hidden rounded-3xl border border-moka/10">
+            <table class="w-full text-sm">
+              <tbody class="divide-y divide-moka/10">
+                <tr><th scope="row" class="px-6 py-4 text-left font-normal text-moka/60">Pièce de vie</th><td class="px-6 py-4">Séjour, coin cuisine ouvert, cheminée d’origine</td><td class="px-6 py-4 text-right font-serif text-xl">24 m²</td></tr>
+                <tr><th scope="row" class="px-6 py-4 text-left font-normal text-moka/60">Chambre</th><td class="px-6 py-4">Sur cour intérieure, second jour</td><td class="px-6 py-4 text-right font-serif text-xl">13 m²</td></tr>
+                <tr><th scope="row" class="px-6 py-4 text-left font-normal text-moka/60">Salle de bains</th><td class="px-6 py-4">Baignoire, fenêtre</td><td class="px-6 py-4 text-right font-serif text-xl">5 m²</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <div class="rule my-12"></div>
+
+        <!-- Quartier -->
+        <section class="grid gap-8 md:grid-cols-[200px_1fr]">
+          <h2 class="eyebrow reveal text-moka/50">Quartier</h2>
+          <div class="reveal">
+            <div class="relative h-72 overflow-hidden rounded-3xl bg-sable-100">
+              <svg class="absolute inset-0 h-full w-full text-moka/15" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice" fill="none" stroke="currentColor" aria-hidden="true">
+                <path d="M-10 60h820M-10 150h820M-10 250h820M120 -10v320M300 -10v320M470 -10v320M640 -10v320" stroke-width="1.5"/>
+                <path d="M60 -10 260 310M520 -10 720 310M820 40 480 310" stroke-width="1"/>
+                <rect x="320" y="90" width="160" height="110" rx="6" fill="currentColor" class="text-sage-100" stroke="none"/>
+              </svg>
+              <span class="absolute left-[38%] top-[28%] text-[11px] font-medium text-sage-700">Palais de Justice</span>
+              <span class="absolute left-1/2 top-1/2 grid h-14 w-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-moka text-ivoire shadow-float ring-8 ring-moka/10"><i data-lucide="home" class="h-5 w-5"></i></span>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill-soft"><i data-lucide="footprints" class="h-4 w-4"></i> Cours Mirabeau · 4 min à pied</span>
+              <span class="pill-soft"><i data-lucide="store" class="h-4 w-4"></i> Marché des Prêcheurs · 3 min</span>
+              <span class="pill-soft"><i data-lucide="graduation-cap" class="h-4 w-4"></i> Institut d’études politiques · 6 min</span>
+              <span class="pill-soft"><i data-lucide="train-front" class="h-4 w-4"></i> Gare TGV Aix-en-Provence · 15 min</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="rule my-12"></div>
+
+        <!-- Simulateur -->
+        <section class="grid gap-8 md:grid-cols-[200px_1fr]">
+          <h2 class="eyebrow reveal text-moka/50">Financement</h2>
+          <div data-loan data-price="280000" class="reveal grid gap-8 rounded-3xl bg-sable-50 p-7 md:grid-cols-[1fr_220px] md:p-9">
+            <div class="space-y-7">
+              <label class="block"><span class="flex justify-between text-sm"><span class="text-moka/60">Apport</span><span data-out="apport" class="font-medium"></span></span><input name="apport" type="range" min="10" max="60" value="30" class="lux-range mt-3" /></label>
+              <label class="block"><span class="flex justify-between text-sm"><span class="text-moka/60">Durée</span><span data-out="duree" class="font-medium"></span></span><input name="duree" type="range" min="10" max="25" value="20" class="lux-range mt-3" /></label>
+              <label class="block"><span class="flex justify-between text-sm"><span class="text-moka/60">Taux indicatif</span><span data-out="taux" class="font-medium"></span></span><input name="taux" type="range" min="2" max="5" step="0.05" value="3.35" class="lux-range mt-3" /></label>
+            </div>
+            <div class="flex flex-col justify-between rounded-2xl bg-moka p-6 text-ivoire">
+              <p class="eyebrow text-ivoire/50">Mensualité estimée</p>
+              <p class="mt-4 font-serif text-5xl leading-none"><span data-out="mensualite"></span> <em class="text-2xl">€</em></p>
+              <p class="mt-4 text-xs text-ivoire/50">Capital emprunté : <span data-out="capital"></span>. Hors assurance, à titre indicatif.</p>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <!-- Carte agent flottante -->
+      <aside class="lg:col-span-4">
+        <div data-booking class="reveal rounded-3xl bg-ivoire-50 p-6 shadow-soft ring-1 ring-moka/5 lg:sticky lg:top-28">
+          <div class="flex items-center gap-4">
+            <img src="assets/img/fondatrice.webp" alt="Hélène de Varennes" class="h-16 w-16 rounded-2xl object-cover object-top" />
+            <div class="flex-1">
+              <p class="font-serif text-2xl leading-none">Hélène de Varennes</p>
+              <p class="mt-1.5 text-xs text-moka/55">Associée fondatrice · Aix-en-Provence</p>
+              <p class="mt-1.5 flex items-center gap-1 text-xs"><i data-lucide="star" class="h-3.5 w-3.5 fill-current text-terre"></i> 4,9 <span class="text-moka/45">· la Maison depuis 2009</span></p>
+            </div>
+          </div>
+          <div class="mt-5 grid grid-cols-2 gap-2">
+            <a href="tel:+33442961020" class="pill-soft justify-center !py-3 hover:bg-moka/10"><i data-lucide="phone" class="h-4 w-4"></i> Appeler</a>
+            <a href="#" class="pill-soft justify-center !py-3 hover:bg-moka/10"><i data-lucide="message-circle" class="h-4 w-4"></i> WhatsApp</a>
+          </div>
+
+          <div class="rule my-6"></div>
+
+          <div data-book-form>
+            <p class="font-serif text-2xl">Planifier une <em>visite</em></p>
+            <div class="mt-4 grid grid-cols-2 gap-1 rounded-full bg-moka/[.05] p-1 text-sm" role="group" aria-label="Type de visite">
+              <button type="button" data-mode="Sur place" aria-pressed="true" class="day-btn rounded-full py-2.5 transition">Sur place</button>
+              <button type="button" data-mode="En visio" aria-pressed="false" class="day-btn rounded-full py-2.5 transition">En visio</button>
+            </div>
+            <p class="eyebrow mt-6 text-moka/45">Date</p>
+            <div data-days class="no-scrollbar -mx-1 mt-3 flex gap-2 overflow-x-auto px-1 pb-1"></div>
+            <p class="eyebrow mt-6 text-moka/45">Horaire</p>
+            <div data-slots class="mt-3 grid grid-cols-3 gap-2"></div>
+            <button type="button" data-book-cta disabled class="btn-dark mt-6 w-full disabled:cursor-not-allowed disabled:bg-moka/30"><span>Choisissez un créneau</span></button>
+            <p class="mt-3 text-center text-[11px] text-moka/45">Réponse garantie sous 2 h · Sans engagement</p>
+          </div>
+
+          <div data-book-done hidden class="py-6 text-center">
+            <span class="mx-auto grid h-14 w-14 place-items-center rounded-full bg-sage text-ivoire"><i data-lucide="calendar-check" class="h-6 w-6"></i></span>
+            <p class="mt-5 font-serif text-3xl">Visite <em>réservée</em></p>
+            <p data-done-text class="mt-2 text-sm text-moka/60"></p>
+            <button type="button" data-book-reset class="mt-6 text-sm underline underline-offset-4">Modifier</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Biens similaires -->
+  <section class="shell py-24 md:py-32" aria-labelledby="similar">
+    <div class="mb-10 flex items-end justify-between">
+      <h2 id="similar" class="reveal text-h2">Vous aimerez <em>aussi</em></h2>
+      <a href="index.html#selection" class="btn-ghost reveal hidden md:inline-flex">Toute la sélection <i data-lucide="arrow-right" class="i i-go h-4 w-4"></i></a>
+    </div>
+    <div class="grid gap-4 md:grid-cols-3">
+      <a href="bien-pied-a-terre.html" class="group reveal block">
+        <div class="card aspect-[4/3]"><img src="assets/img/standard-3.webp" alt="Appartement de charme, Nice" class="card-media" loading="lazy" /><span class="price-badge absolute left-4 top-4 !bg-noir/25">450 000 €</span></div>
+        <div class="mt-4 flex items-start justify-between"><div><h3 class="font-serif text-2xl">Appartement de <em>charme</em></h3><p class="mt-1 text-sm text-moka/55">Nice · 68 m² · 3 pièces</p></div><span class="btn-arrow border border-moka/10 group-hover:bg-moka group-hover:text-ivoire"><i data-lucide="arrow-right" class="i i-go h-4 w-4"></i></span></div>
+      </a>
+      <a href="bien-standard.html" class="group reveal block" style="--d:80ms">
+        <div class="card aspect-[4/3]"><img src="assets/img/prop-luberon.webp" alt="Bastide des Cyprès" class="card-media" loading="lazy" /><span class="price-badge absolute left-4 top-4 !bg-noir/25">2 120 000 €</span></div>
+        <div class="mt-4 flex items-start justify-between"><div><h3 class="font-serif text-2xl">Bastide des <em>Cyprès</em></h3><p class="mt-1 text-sm text-moka/55">Mougins · 430 m² · 8 pièces</p></div><span class="btn-arrow border border-moka/10 group-hover:bg-moka group-hover:text-ivoire"><i data-lucide="arrow-right" class="i i-go h-4 w-4"></i></span></div>
+      </a>
+      <a href="bien-prestige.html" class="group reveal block" style="--d:160ms">
+        <div class="card aspect-[4/3]"><img src="assets/img/villa-1.webp" alt="Villa Les Palmiers" class="card-media" loading="lazy" /><span class="price-badge absolute left-4 top-4 !bg-noir/25">2 850 000 €</span></div>
+        <div class="mt-4 flex items-start justify-between"><div><h3 class="font-serif text-2xl">Villa Les <em>Palmiers</em></h3><p class="mt-1 text-sm text-moka/55">Cap d’Antibes · 520 m² · 9 pièces</p></div><span class="btn-arrow border border-moka/10 group-hover:bg-moka group-hover:text-ivoire"><i data-lucide="arrow-right" class="i i-go h-4 w-4"></i></span></div>
+      </a>
+    </div>
+  </section>
+</main>
+
+{{FOOTER}}
+{{TAIL}}

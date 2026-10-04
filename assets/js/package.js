@@ -1,5 +1,5 @@
 /* ============================================================
-   Triade Concept Immo — Sélecteur de périmètre à 3 niveaux (démonstration)
+   Maison Orée — Sélecteur de périmètre à 3 niveaux (démonstration)
    Essentiel · Signature · Prestige FULL
    Persisté en localStorage, partagé entre le site public et les
    deux back-offices : dashboard-light = Essentiel (4 modules) ·

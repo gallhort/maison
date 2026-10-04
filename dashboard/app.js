@@ -1,5 +1,5 @@
 /* ============================================================
-   Triade Concept Immo — Application front (données fictives)
+   Maison Orée — Application front (données fictives)
    ============================================================ */
 (() => {
   const { agents, properties, clients, appointments, conversations, transactions, notifications, activites, mandats, offres, taches, rapports,
@@ -555,7 +555,7 @@
     const v = $('#view-parametres');
     const tabs = { agence: 'Agence', prefs: 'Préférences', equipe: 'Rôles & accès', integrations: 'Intégrations', notifs: 'Notifications' };
     const content = {
-      agence: `<h3 class="card-title" style="margin-bottom:14px">Informations de l’agence</h3><div class="form-grid"><div class="field"><label>Nom commercial</label><input value="Triade Concept Immo" /></div><div class="field"><label>Téléphone</label><input value="+33 4 42 96 10 20" /></div><div class="field full"><label>Adresse</label><input value="67 Cours Mirabeau, 13100 Aix-en-Provence" /></div><div class="field"><label>E-mail</label><input value="contact@triadeconceptimmo.fr" /></div><div class="field"><label>Site web</label><input value="triadeconceptimmo.fr" /></div><div class="field"><label>Commission vente par défaut</label><input value="3 %" /></div><div class="field"><label>Honoraires location</label><input value="1 mois de loyer" /></div></div><div class="modal-foot"><button class="btn primary" data-action="save">Enregistrer</button></div>`,
+      agence: `<h3 class="card-title" style="margin-bottom:14px">Informations de l’agence</h3><div class="form-grid"><div class="field"><label>Nom commercial</label><input value="Maison Orée" /></div><div class="field"><label>Téléphone</label><input value="+33 4 42 96 10 20" /></div><div class="field full"><label>Adresse</label><input value="67 Cours Mirabeau, 13100 Aix-en-Provence" /></div><div class="field"><label>E-mail</label><input value="contact@triadeconceptimmo.fr" /></div><div class="field"><label>Site web</label><input value="triadeconceptimmo.fr" /></div><div class="field"><label>Commission vente par défaut</label><input value="3 %" /></div><div class="field"><label>Honoraires location</label><input value="1 mois de loyer" /></div></div><div class="modal-foot"><button class="btn primary" data-action="save">Enregistrer</button></div>`,
       prefs: `<h3 class="card-title" style="margin-bottom:6px">Préférences d’affichage</h3>
         <div class="setting-row"><div><b>Thème sombre</b><small>Interface adaptée aux environnements peu éclairés</small></div><button class="switch ${state.theme === 'dark' ? 'on' : ''}" data-action="toggle-theme" aria-label="Thème sombre"></button></div>
         <div class="setting-row"><div><b>Devise d’affichage</b><small>Tous les montants sont exprimés en euros</small></div><div class="segmented"><button class="active">€ Euro</button></div></div>
@@ -1164,7 +1164,7 @@
     const visites = appointments.filter(x => x.bien === p.id && x.type === 'Visite' && x.date.slice(0, 7) === periode && x.statut !== 'Annulé');
     const os = offres.filter(o => o.bien === p.id && o.date.slice(0, 7) === periode);
     const vues = Math.round(p.vues * ratio); const contacts = Math.max(visites.length + 2, Math.round(vues / 75)); const parts = [0.2, 0.25, 0.28, 0.27];
-    const canaux = [['Site Triade Concept Immo', 0.46], ['SeLoger Premium', 0.32], ['Bien’ici', 0.14], ['Réseau international', 0.08]];
+    const canaux = [['Site Maison Orée', 0.46], ['SeLoger Premium', 0.32], ['Bien’ici', 0.14], ['Réseau international', 0.08]];
     const avis = ['Positif', 'Neutre', 'Positif', 'Négatif']; const coms = ['Très bonne impression générale, réfléchit.', 'Aime l’emplacement, hésite sur le prix.', 'Souhaite revisiter avec la famille.', 'Ne correspond pas à ses critères de surface.'];
     const recoTxt = reco === 'renouveler' ? `Le mandat arrive à son terme le ${dateFR(m.fin, { day: 'numeric', month: 'long' })} : nous recommandons un renouvellement avec un plan de diffusion renforcé.` : +reco ? `Au regard des retours de visites et du positionnement par rapport au marché de ${p.quartier}, nous recommandons un ajustement du prix de ${Math.abs(+reco)} % afin de relancer les contacts qualifiés.` : `Les indicateurs d’audience sont conformes au marché de ${p.quartier}. Nous recommandons de maintenir le prix et de poursuivre la diffusion en cours.`;
     const r = { id: 'r' + Date.now(), mandat: m.id, bien: p.id, periode, genere: TODAY, statut: 'Brouillon', envoye: null, consulte: null, canal,
@@ -1200,7 +1200,7 @@
     $$('.view').forEach(s => s.classList.toggle('active', s.id === 'view-' + name));
     if (name === 'biens' && param === 'carte') state.biensFilters.mode = 'map';
     renderers[name](); current = name; window.scrollTo({ top: 0 });
-    document.title = `Triade Concept Immo — ${{ dashboard: 'Tableau de bord', biens: 'Biens', mandats: 'Mandats', offres: 'Offres', taches: 'Tâches', rapports: 'Rapports', agenda: 'Rendez-vous', messages: 'Messages', clients: 'Clients', agents: 'Équipe', finances: 'Finances', parametres: 'Paramètres' }[name]}`;
+    document.title = `Maison Orée — ${{ dashboard: 'Tableau de bord', biens: 'Biens', mandats: 'Mandats', offres: 'Offres', taches: 'Tâches', rapports: 'Rapports', agenda: 'Rendez-vous', messages: 'Messages', clients: 'Clients', agents: 'Équipe', finances: 'Finances', parametres: 'Paramètres' }[name]}`;
   }
   const renderAll = () => { route(); renderNotifs(); updateTaskDot(); };
 

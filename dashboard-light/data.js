@@ -1,5 +1,5 @@
 /* =====================================================================
-   Triade Concept Immo — Back-Office Essentiel · data.js (allégé)
+   Maison Orée — Back-Office Essentiel · data.js (allégé)
    Données fictives exposées dans window.DB.
    C'est le seul fichier à remplacer par des appels API.
    Collections conservées : agence, user, properties, demandes, appointments.
@@ -18,7 +18,7 @@
     showUpgrade: true,     // Affiche le rappel discret « Prestige FULL »
 
     agence: {
-      nom: 'Triade Concept Immo',
+      nom: 'Maison Orée',
       slogan: 'Expertise et Confiance',
       adresse: '67 Cours Mirabeau, 13100 Aix-en-Provence',
       tel: '+33 4 42 96 10 20',

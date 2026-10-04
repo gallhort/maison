@@ -208,6 +208,7 @@ input[type="range"].lux-range::-moz-range-thumb { width: 18px; height: 18px; bor
 .lb-stage { display: grid; place-items: center; padding: 0 1rem; min-height: 0; }
 .lb-stage img { max-width: min(1200px, 100%); max-height: calc(100dvh - 11rem); border-radius: 1.5rem; object-fit: contain; opacity: 0; transform: scale(.98); transition: opacity .5s var(--ease-lux), transform .8s var(--ease-lux); }
 .lb-stage img.is-in { opacity: 1; transform: none; }
+.lb-stage video { max-width: min(1200px, 100%); max-height: calc(100dvh - 11rem); border-radius: 1.5rem; }
 .lb-btn { display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 999px; border: 1px solid rgba(255,255,255,.18); color: var(--ivoire); transition: background .3s; }
 .lb-btn:hover { background: rgba(255,255,255,.1); }
 .lb-prev, .lb-next { position: absolute; top: 50%; transform: translateY(-50%); }
@@ -287,8 +288,9 @@ html .curtain.is-leaving svg { opacity: .8; transition-delay: .25s; }
 .float-field { position: relative; }
 .float-field input { width: 100%; border-radius: 1.25rem; border: 1px solid rgba(28,25,23,.1); background: var(--ivoire); padding: 1.6rem 1.25rem .6rem; font-size: 15px; outline: none; transition: border-color .3s, background .3s; }
 .float-field input:focus { border-color: rgba(28,25,23,.45); background: #fff; }
+.float-field input:-webkit-autofill, .float-field input:-webkit-autofill:focus { -webkit-text-fill-color: #1C1917; transition: background-color 5000s ease-in-out 0s; box-shadow: 0 0 0 1000px var(--ivoire) inset; caret-color: #1C1917; }
 .float-field label { position: absolute; left: 1.25rem; top: 50%; transform: translateY(-50%); font-size: 14px; color: rgba(28,25,23,.45); pointer-events: none; transition: all .3s var(--ease-lux); }
-.float-field input:focus + label, .float-field input:not(:placeholder-shown) + label { top: 1rem; font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; }
+.float-field input:focus + label, .float-field input:not(:placeholder-shown) + label, .float-field input:-webkit-autofill + label, .float-field input:autofill + label { top: 1rem; font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; }
 .float-field.is-invalid input { border-color: #9A4B32; }
 .est-check { appearance: none; -webkit-appearance: none; flex-shrink: 0; width: 1.1rem; height: 1.1rem; border-radius: .35rem; border: 1px solid rgba(28,25,23,.3); cursor: pointer; transition: all .3s; }
 .est-check:checked { background: var(--moka) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23F8F9FA' stroke-width='2.2'%3E%3Cpath d='M5.5 10.5l3 3L14.5 7'/%3E%3C/svg%3E") center/100% no-repeat; border-color: var(--moka); }

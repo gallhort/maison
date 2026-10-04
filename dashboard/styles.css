@@ -92,7 +92,7 @@ img { display: block; max-width: 100%; }
 .brand-name { white-space: nowrap; font-family: var(--font-display); font-size: 24px; letter-spacing: .01em; line-height: 1; }
 .brand-name small { display: block; font-family: var(--font-body); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-3); margin-top: 3px; }
 
-.nav { display: flex; gap: 3px; background: var(--surface); padding: 5px; border-radius: var(--r-pill); box-shadow: var(--shadow-sm); overflow-x: auto; scrollbar-width: none; min-width: 0; justify-content: center; }
+.nav { display: flex; gap: 3px; background: var(--surface); padding: 5px; border-radius: var(--r-pill); box-shadow: var(--shadow-sm); overflow-x: auto; scrollbar-width: none; min-width: 0; justify-content: flex-start; }
 .nav::-webkit-scrollbar { display: none; }
 /* Périmètre « Signature » : masque les modules réservés à Prestige FULL
    (voir assets/js/package.js — data-package appliqué sur <html>/<body>). */

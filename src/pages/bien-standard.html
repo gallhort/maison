@@ -1,4 +1,4 @@
-{{HEAD:Villa Belharra — Biarritz · Triade Concept Immo|Villa de 240 m² face à l’océan à Biarritz, Côte Basque. 6 pièces, 4 chambres, vue mer panoramique.}}
+{{HEAD:Villa Belharra — Biarritz · Maison Orée|Villa de 240 m² face à l’océan à Biarritz, Côte Basque. 6 pièces, 4 chambres, vue mer panoramique.}}
 <body>
 {{HEADER:dark|light|buy}}
 
@@ -24,34 +24,36 @@
     <!-- Hero photo géant arrondi -->
     <section class="mt-6 grid gap-3 lg:h-[72vh] lg:min-h-[560px] lg:grid-cols-12" aria-label="Galerie">
       <div class="group card reveal-img isolate h-[56vh] min-h-[380px] bg-moka lg:col-span-8 lg:h-auto" data-daynight data-lb="Façade face à l’océan">
-        <img src="assets/img/biarritz-hero-dawn.webp" data-phase-layer="dawn" alt="Villa contemporaine à colombages face à l’océan, à l’aube sous un ciel rose et lavande" class="hero-layer animate-kenburns" fetchpriority="low" />
-        <img src="assets/img/biarritz-hero-day.webp" data-phase-layer="day" alt="La même villa en plein jour, ciel bleu et océan turquoise" class="hero-layer animate-kenburns" fetchpriority="high" />
-        <img src="assets/img/biarritz-hero-dusk.webp" data-phase-layer="dusk" alt="La même villa en début de soirée, façade dorée par le soleil couchant" class="hero-layer animate-kenburns" fetchpriority="low" />
-        <img src="assets/img/biarritz-hero-night.webp" data-phase-layer="night" alt="La même villa de nuit, baies vitrées illuminées face à l’océan" class="hero-layer animate-kenburns" fetchpriority="low" />
-        <div class="hero-tint pointer-events-none absolute inset-0 z-[5] bg-gradient-to-t from-noir/70 via-noir/0 to-noir/10"></div>
-        <div class="absolute left-4 top-4 z-10 flex gap-2"><span class="pill bg-ivoire/90 text-moka backdrop-blur"><i data-lucide="sparkle" class="h-3.5 w-3.5"></i> Exclusivité</span><span class="pill-glass">Visite 3D</span></div>
+        <div>
+          <img src="assets/img/biarritz-hero-dawn.webp" data-phase-layer="dawn" alt="Villa contemporaine à colombages face à l’océan, à l’aube sous un ciel rose et lavande" class="hero-layer animate-kenburns" fetchpriority="low" />
+          <img src="assets/img/biarritz-hero-day.webp" data-phase-layer="day" alt="La même villa en plein jour, ciel bleu et océan turquoise" class="hero-layer animate-kenburns" fetchpriority="high" />
+          <img src="assets/img/biarritz-hero-dusk.webp" data-phase-layer="dusk" alt="La même villa en début de soirée, façade dorée par le soleil couchant" class="hero-layer animate-kenburns" fetchpriority="low" />
+          <img src="assets/img/biarritz-hero-night.webp" data-phase-layer="night" alt="La même villa de nuit, baies vitrées illuminées face à l’océan" class="hero-layer animate-kenburns" fetchpriority="low" />
+          <div class="hero-tint pointer-events-none absolute inset-0 z-[5] bg-gradient-to-t from-noir/70 via-noir/0 to-noir/10"></div>
 
-        <!-- Interrupteur 4 temps : Aube / Jour / Soir / Nuit -->
-        <div class="absolute right-4 top-4 z-10 flex flex-col items-end gap-2">
-          <div class="daynight border border-white/25 bg-white/10 backdrop-blur-xl" role="radiogroup" aria-label="Ambiance selon l’heure">
-            <span class="daynight__thumb" aria-hidden="true"></span>
-            <button type="button" role="radio" data-dn="dawn" aria-label="Aube" aria-checked="false" title="Aube"><i data-lucide="sunrise" class="h-[18px] w-[18px]"></i></button>
-            <button type="button" role="radio" data-dn="day" aria-label="Plein jour" aria-checked="true" title="Plein jour"><i data-lucide="sun" class="h-[18px] w-[18px]"></i></button>
-            <button type="button" role="radio" data-dn="dusk" aria-label="Début de soirée" aria-checked="false" title="Début de soirée"><i data-lucide="sunset" class="h-[18px] w-[18px]"></i></button>
-            <button type="button" role="radio" data-dn="night" aria-label="Nuit" aria-checked="false" title="Nuit"><i data-lucide="moon" class="h-[18px] w-[18px]"></i></button>
+          <!-- Interrupteur 4 temps : Aube / Jour / Soir / Nuit -->
+          <div class="absolute right-4 top-4 z-10 flex flex-col items-end gap-2">
+            <div class="daynight border border-white/25 bg-white/10 backdrop-blur-xl" role="radiogroup" aria-label="Ambiance selon l’heure">
+              <span class="daynight__thumb" aria-hidden="true"></span>
+              <button type="button" role="radio" data-dn="dawn" aria-label="Aube" aria-checked="false" title="Aube"><i data-lucide="sunrise" class="h-[18px] w-[18px]"></i></button>
+              <button type="button" role="radio" data-dn="day" aria-label="Plein jour" aria-checked="true" title="Plein jour"><i data-lucide="sun" class="h-[18px] w-[18px]"></i></button>
+              <button type="button" role="radio" data-dn="dusk" aria-label="Début de soirée" aria-checked="false" title="Début de soirée"><i data-lucide="sunset" class="h-[18px] w-[18px]"></i></button>
+              <button type="button" role="radio" data-dn="night" aria-label="Nuit" aria-checked="false" title="Nuit"><i data-lucide="moon" class="h-[18px] w-[18px]"></i></button>
+            </div>
+            <p class="dn-caption eyebrow flex items-center gap-2 text-right text-white/80">
+              <span data-phase-label>Plein jour</span><span aria-hidden="true">·</span><span data-hero-clock>—</span>
+              <button type="button" data-dn-auto class="dn-auto" aria-label="Revenir à l’ambiance de l’heure réelle"><i data-lucide="rotate-ccw" class="h-3 w-3"></i>Auto</button>
+            </p>
           </div>
-          <p class="dn-caption eyebrow flex items-center gap-2 text-right text-white/80">
-            <span data-phase-label>Plein jour</span><span aria-hidden="true">·</span><span data-hero-clock>—</span>
-            <button type="button" data-dn-auto class="dn-auto" aria-label="Revenir à l’ambiance de l’heure réelle"><i data-lucide="rotate-ccw" class="h-3 w-3"></i>Auto</button>
-          </p>
         </div>
 
+        <div class="absolute left-4 top-4 z-10 flex gap-2"><span class="pill bg-ivoire/90 text-moka backdrop-blur"><i data-lucide="sparkle" class="h-3.5 w-3.5"></i> Exclusivité</span><button type="button" data-tier="full" data-tour-open="https://my.matterport.com/show/?m=YvgjewHhhM9" class="pill-glass transition hover:bg-white/25"><i data-lucide="scan-line" class="h-3.5 w-3.5"></i> Visite 3D</button></div>
         <button type="button" data-lb-open class="pill absolute bottom-4 left-4 z-10 bg-ivoire/90 text-moka backdrop-blur transition hover:bg-ivoire"><i data-lucide="images" class="h-4 w-4"></i> Ouvrir la galerie</button>
       </div>
       <div class="grid grid-cols-2 gap-3 lg:col-span-4 lg:grid-cols-1 lg:grid-rows-2">
         <div class="group card reveal-img h-48 lg:h-auto" style="--d:80ms" data-lb="Double séjour"><img src="assets/img/standard-2.webp" alt="Double séjour ouvert sur le jardin" class="card-media" /></div>
         <div class="group card reveal-img h-48 lg:h-auto" style="--d:160ms" data-lb="Suite parentale"><img src="assets/img/standard-3.webp" alt="Suite parentale aux murs de chaux" class="card-media" />
-          <span class="absolute inset-0 grid place-items-center bg-noir/30 text-white"><span class="pill-glass"><i data-lucide="play" class="h-3.5 w-3.5"></i> Film du bien · 1 min 40</span></span>
+          <button type="button" data-tier="full" data-video-open="assets/video/villa-teaser.mp4" data-video-poster="assets/img/villa-teaser-poster.webp" class="absolute inset-0 grid place-items-center bg-noir/30 text-white transition hover:bg-noir/40"><span class="pill-glass"><i data-lucide="play" class="h-3.5 w-3.5"></i> Film du bien · 0 min 13</span></button>
         </div>
       </div>
     </section>
@@ -90,10 +92,10 @@
           <h2 class="eyebrow reveal text-moka/50">Le bien</h2>
           <div class="reveal">
             <div id="desc" class="clamp-text space-y-4 text-[15px] leading-[1.8] text-moka/75">
-              <p class="font-serif text-2xl leading-snug text-moka">Au sommet d’une falaise de la Côte Basque, une villa à colombages entièrement rénovée où l’architecture traditionnelle dialogue avec de larges baies vitrées face à l’océan.</p>
+              <p class="font-serif text-2xl leading-snug text-moka">Au sommet d’une falaise de la Côte Basque, une villa à colombages des années 1930 entièrement rénovée en 2024, où l’architecture traditionnelle dialogue avec de larges baies vitrées face à l’océan — un emplacement rarement disponible sur ce secteur de la Côte des Basques.</p>
               <p>Le rez-de-chaussée s’ouvre par une enfilade de portes-fenêtres sur une terrasse suspendue au-dessus de l’Atlantique. Séjour cathédrale avec cheminée, salle à manger, cuisine ouverte attenante à la terrasse, vue continue sur le phare de Biarritz.</p>
               <p>À l’étage, la suite parentale occupe toute la façade océan : dressing, salle de bains en travertin et bureau. Le second niveau accueille trois chambres et deux salles d’eau, toutes tournées vers la mer.</p>
-              <p>Diagnostic Feng Shui réalisé : orientation Ouest favorable (élément Eau), circulation fluide du Qi dans l’enfilade, secteur Carrière à l’Ouest mis en valeur par la vue océan.</p>
+              <p>Lecture architecturale réalisée : orientation Ouest particulièrement favorable à la lumière de fin de journée, circulation fluide dans l’enfilade des pièces de réception, volumes mis en valeur par la vue océan continue.</p>
             </div>
             <button type="button" data-expand="desc" aria-expanded="false" class="mt-5 inline-flex items-center gap-2 text-sm font-medium underline decoration-moka/20 underline-offset-8 hover:decoration-moka"><span>Lire la suite</span> <i data-lucide="plus" class="h-4 w-4"></i></button>
           </div>
@@ -182,8 +184,8 @@
             <img src="assets/img/agent.webp" alt="Antoine Mercier" class="h-16 w-16 rounded-2xl object-cover object-top" />
             <div class="flex-1">
               <p class="font-serif text-2xl leading-none">Antoine Mercier</p>
-              <p class="mt-1.5 text-xs text-moka/55">Conseiller senior · Triade Concept Immo</p>
-              <p class="mt-1.5 flex items-center gap-1 text-xs"><i data-lucide="star" class="h-3.5 w-3.5 fill-current text-terre"></i> 4,9 <span class="text-moka/45">· 86 ventes</span></p>
+              <p class="mt-1.5 text-xs text-moka/55">Associé · Valorisation Riviera</p>
+              <p class="mt-1.5 flex items-center gap-1 text-xs"><i data-lucide="star" class="h-3.5 w-3.5 fill-current text-terre"></i> 4,9 <span class="text-moka/45">· 86 mandats accompagnés</span></p>
             </div>
           </div>
           <div class="mt-5 grid grid-cols-2 gap-2">

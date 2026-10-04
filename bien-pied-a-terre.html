@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Villa Belharra — Biarritz · Maison Orée</title>
-  <meta name="description" content="Villa de 240 m² face à l’océan à Biarritz, Côte Basque. 6 pièces, 4 chambres, vue mer panoramique." />
+  <title>Pied-à-terre historique — Aix-en-Provence · Maison Orée</title>
+  <meta name="description" content="Appartement de 42 m² au cœur du centre historique d’Aix-en-Provence, face au Palais de Justice. Moulures d’origine, belle hauteur sous plafond." />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -76,16 +76,16 @@
 
 <main class="pt-28 md:pt-32">
   <!-- =====================================================================
-       GABARIT STANDARD HAUT DE GAMME
-       (inspiration : Premium Real Estate Website + Real Estate Website Design)
+       GABARIT ENTRÉE DE GAMME — même exigence éditoriale, échelle différente
+       (dupliqué depuis bien-standard.html, voir plan étape audit Paquet 3)
        ===================================================================== -->
   <div class="shell">
     <!-- Fil d'Ariane + actions -->
     <div class="flex flex-wrap items-center justify-between gap-4">
       <nav class="flex items-center gap-2 text-xs text-moka/50" aria-label="Fil d’Ariane">
         <a href="index.html" class="hover:text-moka">Accueil</a><i data-lucide="chevron-right" class="h-3 w-3"></i>
-        <a href="#" class="hover:text-moka">Côte Basque</a><i data-lucide="chevron-right" class="h-3 w-3"></i>
-        <span class="text-moka">Réf. TCI-64-1204</span>
+        <a href="#" class="hover:text-moka">Aix-en-Provence</a><i data-lucide="chevron-right" class="h-3 w-3"></i>
+        <span class="text-moka">Réf. TCI-13-0842</span>
       </nav>
       <div class="flex gap-2">
         <button type="button" class="pill-line hover:border-moka/30" onclick="navigator.clipboard?.writeText(location.href);oreeToast('Lien copié dans le presse-papiers')"><i data-lucide="share-2" class="h-4 w-4"></i> Partager</button>
@@ -93,40 +93,16 @@
       </div>
     </div>
 
-    <!-- Hero photo géant arrondi -->
-    <section class="mt-6 grid gap-3 lg:h-[72vh] lg:min-h-[560px] lg:grid-cols-12" aria-label="Galerie">
-      <div class="group card reveal-img isolate h-[56vh] min-h-[380px] bg-moka lg:col-span-8 lg:h-auto" data-daynight data-lb="Façade face à l’océan">
-        <div>
-          <img src="assets/img/biarritz-hero-dawn.webp" data-phase-layer="dawn" alt="Villa contemporaine à colombages face à l’océan, à l’aube sous un ciel rose et lavande" class="hero-layer animate-kenburns" fetchpriority="low" />
-          <img src="assets/img/biarritz-hero-day.webp" data-phase-layer="day" alt="La même villa en plein jour, ciel bleu et océan turquoise" class="hero-layer animate-kenburns" fetchpriority="high" />
-          <img src="assets/img/biarritz-hero-dusk.webp" data-phase-layer="dusk" alt="La même villa en début de soirée, façade dorée par le soleil couchant" class="hero-layer animate-kenburns" fetchpriority="low" />
-          <img src="assets/img/biarritz-hero-night.webp" data-phase-layer="night" alt="La même villa de nuit, baies vitrées illuminées face à l’océan" class="hero-layer animate-kenburns" fetchpriority="low" />
-          <div class="hero-tint pointer-events-none absolute inset-0 z-[5] bg-gradient-to-t from-noir/70 via-noir/0 to-noir/10"></div>
-
-          <!-- Interrupteur 4 temps : Aube / Jour / Soir / Nuit -->
-          <div class="absolute right-4 top-4 z-10 flex flex-col items-end gap-2">
-            <div class="daynight border border-white/25 bg-white/10 backdrop-blur-xl" role="radiogroup" aria-label="Ambiance selon l’heure">
-              <span class="daynight__thumb" aria-hidden="true"></span>
-              <button type="button" role="radio" data-dn="dawn" aria-label="Aube" aria-checked="false" title="Aube"><i data-lucide="sunrise" class="h-[18px] w-[18px]"></i></button>
-              <button type="button" role="radio" data-dn="day" aria-label="Plein jour" aria-checked="true" title="Plein jour"><i data-lucide="sun" class="h-[18px] w-[18px]"></i></button>
-              <button type="button" role="radio" data-dn="dusk" aria-label="Début de soirée" aria-checked="false" title="Début de soirée"><i data-lucide="sunset" class="h-[18px] w-[18px]"></i></button>
-              <button type="button" role="radio" data-dn="night" aria-label="Nuit" aria-checked="false" title="Nuit"><i data-lucide="moon" class="h-[18px] w-[18px]"></i></button>
-            </div>
-            <p class="dn-caption eyebrow flex items-center gap-2 text-right text-white/80">
-              <span data-phase-label>Plein jour</span><span aria-hidden="true">·</span><span data-hero-clock>—</span>
-              <button type="button" data-dn-auto class="dn-auto" aria-label="Revenir à l’ambiance de l’heure réelle"><i data-lucide="rotate-ccw" class="h-3 w-3"></i>Auto</button>
-            </p>
-          </div>
-        </div>
-
-        <div class="absolute left-4 top-4 z-10 flex gap-2"><span class="pill bg-ivoire/90 text-moka backdrop-blur"><i data-lucide="sparkle" class="h-3.5 w-3.5"></i> Exclusivité</span><button type="button" data-tier="full" data-tour-open="https://my.matterport.com/show/?m=YvgjewHhhM9" class="pill-glass transition hover:bg-white/25"><i data-lucide="scan-line" class="h-3.5 w-3.5"></i> Visite 3D</button></div>
+    <!-- Galerie -->
+    <section class="mt-6 grid gap-3 lg:h-[62vh] lg:min-h-[480px] lg:grid-cols-12" aria-label="Galerie">
+      <div class="group card reveal-img h-[48vh] min-h-[320px] lg:col-span-8 lg:h-auto" data-lb="Séjour et moulures d’origine">
+        <img src="assets/img/prop-marais.webp" alt="Séjour d’un appartement ancien avec moulures et parquet, centre historique d’Aix-en-Provence" class="card-media" />
+        <div class="absolute left-4 top-4 z-10 flex gap-2"><span class="pill bg-ivoire/90 text-moka backdrop-blur"><i data-lucide="landmark" class="h-3.5 w-3.5"></i> Centre historique</span></div>
         <button type="button" data-lb-open class="pill absolute bottom-4 left-4 z-10 bg-ivoire/90 text-moka backdrop-blur transition hover:bg-ivoire"><i data-lucide="images" class="h-4 w-4"></i> Ouvrir la galerie</button>
       </div>
       <div class="grid grid-cols-2 gap-3 lg:col-span-4 lg:grid-cols-1 lg:grid-rows-2">
-        <div class="group card reveal-img h-48 lg:h-auto" style="--d:80ms" data-lb="Double séjour"><img src="assets/img/standard-2.webp" alt="Double séjour ouvert sur le jardin" class="card-media" /></div>
-        <div class="group card reveal-img h-48 lg:h-auto" style="--d:160ms" data-lb="Suite parentale"><img src="assets/img/standard-3.webp" alt="Suite parentale aux murs de chaux" class="card-media" />
-          <button type="button" data-tier="full" data-video-open="assets/video/villa-teaser.mp4" data-video-poster="assets/img/villa-teaser-poster.webp" class="absolute inset-0 grid place-items-center bg-noir/30 text-white transition hover:bg-noir/40"><span class="pill-glass"><i data-lucide="play" class="h-3.5 w-3.5"></i> Film du bien · 0 min 13</span></button>
-        </div>
+        <div class="group card reveal-img h-48 lg:h-auto" style="--d:80ms" data-lb="Chambre"><img src="assets/img/standard-3.webp" alt="Chambre aux murs de chaux, fenêtre haute sur cour" class="card-media" /></div>
+        <div class="group card reveal-img h-48 lg:h-auto" style="--d:160ms" data-lb="Façade sur le Palais de Justice"><img src="assets/img/standard-2.webp" alt="Immeuble ancien en pierre de taille, centre historique d’Aix-en-Provence" class="card-media" /></div>
       </div>
     </section>
 
@@ -136,25 +112,24 @@
       <article class="lg:col-span-8">
         <header class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <p class="eyebrow reveal flex items-center gap-2 text-moka/50"><i data-lucide="map-pin" class="h-3.5 w-3.5"></i> Biarritz · Côte Basque</p>
-            <h1 class="reveal mt-4 text-h1">Villa <em>Belharra</em>, face à l’océan</h1>
+            <p class="eyebrow reveal flex items-center gap-2 text-moka/50"><i data-lucide="map-pin" class="h-3.5 w-3.5"></i> Centre historique · Aix-en-Provence</p>
+            <h1 class="reveal mt-4 text-h1">Pied-à-terre <em>historique</em>, face au Palais de Justice</h1>
           </div>
           <div class="reveal shrink-0 md:text-right">
-            <p class="font-serif text-5xl">1 680 000 €</p>
-            <p class="mt-1 text-xs text-moka/50">Honoraires inclus · 7 000 €/m²</p>
+            <p class="font-serif text-5xl">280 000 €</p>
+            <p class="mt-1 text-xs text-moka/50">Honoraires inclus · 6 667 €/m²</p>
           </div>
         </header>
 
         <!-- Caractéristiques en pilules -->
         <ul class="reveal mt-10 flex flex-wrap gap-2" aria-label="Caractéristiques principales">
-          <li class="pill-line"><i data-lucide="maximize" class="h-4 w-4 text-sage-600"></i> 240 m²</li>
-          <li class="pill-line"><i data-lucide="layout-grid" class="h-4 w-4 text-sage-600"></i> 6 pièces</li>
-          <li class="pill-line"><i data-lucide="bed-double" class="h-4 w-4 text-sage-600"></i> 4 chambres</li>
-          <li class="pill-line"><i data-lucide="bath" class="h-4 w-4 text-sage-600"></i> 3 salles de bains</li>
-          <li class="pill-line"><i data-lucide="waves" class="h-4 w-4 text-sage-600"></i> Terrain 1 200 m²</li>
-          <li class="pill-line"><i data-lucide="car" class="h-4 w-4 text-sage-600"></i> 2 places</li>
-          <li class="pill-line"><i data-lucide="landmark" class="h-4 w-4 text-sage-600"></i> Rénovée 2024</li>
-          <li class="pill-line"><span class="grid h-5 w-5 place-items-center rounded-md bg-[#5BA55B] text-[11px] font-semibold text-white">B</span> DPE</li>
+          <li class="pill-line"><i data-lucide="maximize" class="h-4 w-4 text-sage-600"></i> 42 m²</li>
+          <li class="pill-line"><i data-lucide="layout-grid" class="h-4 w-4 text-sage-600"></i> 2 pièces</li>
+          <li class="pill-line"><i data-lucide="bed-double" class="h-4 w-4 text-sage-600"></i> 1 chambre</li>
+          <li class="pill-line"><i data-lucide="bath" class="h-4 w-4 text-sage-600"></i> 1 salle de bains</li>
+          <li class="pill-line"><i data-lucide="building" class="h-4 w-4 text-sage-600"></i> 2<sup>e</sup> étage, sans ascenseur</li>
+          <li class="pill-line"><i data-lucide="landmark" class="h-4 w-4 text-sage-600"></i> Immeuble XVIII<sup>e</sup></li>
+          <li class="pill-line"><span class="grid h-5 w-5 place-items-center rounded-md bg-[#D9A441] text-[11px] font-semibold text-white">D</span> DPE</li>
         </ul>
 
         <div class="rule my-12"></div>
@@ -164,10 +139,10 @@
           <h2 class="eyebrow reveal text-moka/50">Le bien</h2>
           <div class="reveal">
             <div id="desc" class="clamp-text space-y-4 text-[15px] leading-[1.8] text-moka/75">
-              <p class="font-serif text-2xl leading-snug text-moka">Au sommet d’une falaise de la Côte Basque, une villa à colombages des années 1930 entièrement rénovée en 2024, où l’architecture traditionnelle dialogue avec de larges baies vitrées face à l’océan — un emplacement rarement disponible sur ce secteur de la Côte des Basques.</p>
-              <p>Le rez-de-chaussée s’ouvre par une enfilade de portes-fenêtres sur une terrasse suspendue au-dessus de l’Atlantique. Séjour cathédrale avec cheminée, salle à manger, cuisine ouverte attenante à la terrasse, vue continue sur le phare de Biarritz.</p>
-              <p>À l’étage, la suite parentale occupe toute la façade océan : dressing, salle de bains en travertin et bureau. Le second niveau accueille trois chambres et deux salles d’eau, toutes tournées vers la mer.</p>
-              <p>Lecture architecturale réalisée : orientation Ouest particulièrement favorable à la lumière de fin de journée, circulation fluide dans l’enfilade des pièces de réception, volumes mis en valeur par la vue océan continue.</p>
+              <p class="font-serif text-2xl leading-snug text-moka">Au deuxième étage d’un hôtel particulier du XVIII<sup>e</sup> siècle, à deux pas du Palais de Justice, un appartement traversant qui a conservé l’essentiel de son caractère d’origine.</p>
+              <p>Moulures au plafond, cheminée en marbre condamnée mais conservée, parquet point de Hongrie dans la pièce de vie : le bien n’a jamais été dénaturé par une rénovation trop appuyée. Une hauteur sous plafond de 3,20 m accentue la sensation d’espace malgré une surface compacte.</p>
+              <p>La chambre, en second jour sur une cour intérieure calme, bénéficie d’une exposition qui la préserve des fortes chaleurs estivales — un atout rare dans le centre ancien.</p>
+              <p>Un emplacement de cette rareté, à cette échelle de prix, se représente peu souvent dans le centre historique : la plupart des transactions comparables se concluent avant même leur publication.</p>
             </div>
             <button type="button" data-expand="desc" aria-expanded="false" class="mt-5 inline-flex items-center gap-2 text-sm font-medium underline decoration-moka/20 underline-offset-8 hover:decoration-moka"><span>Lire la suite</span> <i data-lucide="plus" class="h-4 w-4"></i></button>
           </div>
@@ -179,12 +154,12 @@
         <section class="grid gap-8 md:grid-cols-[200px_1fr]">
           <h2 class="eyebrow reveal text-moka/50">Prestations</h2>
           <ul class="reveal grid gap-x-8 gap-y-4 text-[15px] sm:grid-cols-2">
-            <li class="flex items-center gap-3"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage-50 text-sage-700"><i data-lucide="flame" class="h-4 w-4"></i></span>Cheminées en marbre d’origine</li>
-            <li class="flex items-center gap-3"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage-50 text-sage-700"><i data-lucide="chef-hat" class="h-4 w-4"></i></span>Cuisine Bulthaup b3</li>
-            <li class="flex items-center gap-3"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage-50 text-sage-700"><i data-lucide="wine" class="h-4 w-4"></i></span>Cave voûtée 600 bouteilles</li>
-            <li class="flex items-center gap-3"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage-50 text-sage-700"><i data-lucide="thermometer-sun" class="h-4 w-4"></i></span>Pompe à chaleur & plancher chauffant</li>
-            <li class="flex items-center gap-3"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage-50 text-sage-700"><i data-lucide="dumbbell" class="h-4 w-4"></i></span>Salle de sport</li>
-            <li class="flex items-center gap-3"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage-50 text-sage-700"><i data-lucide="shield" class="h-4 w-4"></i></span>Domotique & alarme</li>
+            <li class="flex items-center gap-3"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage-50 text-sage-700"><i data-lucide="flame" class="h-4 w-4"></i></span>Cheminée en marbre d’origine</li>
+            <li class="flex items-center gap-3"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage-50 text-sage-700"><i data-lucide="layers" class="h-4 w-4"></i></span>Parquet point de Hongrie</li>
+            <li class="flex items-center gap-3"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage-50 text-sage-700"><i data-lucide="ruler" class="h-4 w-4"></i></span>Hauteur sous plafond 3,20 m</li>
+            <li class="flex items-center gap-3"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage-50 text-sage-700"><i data-lucide="sun" class="h-4 w-4"></i></span>Double exposition, traversant</li>
+            <li class="flex items-center gap-3"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage-50 text-sage-700"><i data-lucide="archive" class="h-4 w-4"></i></span>Cave privative</li>
+            <li class="flex items-center gap-3"><span class="grid h-8 w-8 place-items-center rounded-full bg-sage-50 text-sage-700"><i data-lucide="bike" class="h-4 w-4"></i></span>Local à vélos dans la copropriété</li>
           </ul>
         </section>
 
@@ -196,9 +171,9 @@
           <div class="reveal overflow-hidden rounded-3xl border border-moka/10">
             <table class="w-full text-sm">
               <tbody class="divide-y divide-moka/10">
-                <tr><th scope="row" class="px-6 py-4 text-left font-normal text-moka/60">Rez-de-chaussée</th><td class="px-6 py-4">Séjour cathédrale, salle à manger, cuisine ouverte, terrasse océan</td><td class="px-6 py-4 text-right font-serif text-xl">130 m²</td></tr>
-                <tr><th scope="row" class="px-6 py-4 text-left font-normal text-moka/60">1<sup>er</sup> étage</th><td class="px-6 py-4">Suite parentale, bureau, dressing</td><td class="px-6 py-4 text-right font-serif text-xl">65 m²</td></tr>
-                <tr><th scope="row" class="px-6 py-4 text-left font-normal text-moka/60">2<sup>e</sup> étage</th><td class="px-6 py-4">3 chambres, 2 salles d’eau</td><td class="px-6 py-4 text-right font-serif text-xl">45 m²</td></tr>
+                <tr><th scope="row" class="px-6 py-4 text-left font-normal text-moka/60">Pièce de vie</th><td class="px-6 py-4">Séjour, coin cuisine ouvert, cheminée d’origine</td><td class="px-6 py-4 text-right font-serif text-xl">24 m²</td></tr>
+                <tr><th scope="row" class="px-6 py-4 text-left font-normal text-moka/60">Chambre</th><td class="px-6 py-4">Sur cour intérieure, second jour</td><td class="px-6 py-4 text-right font-serif text-xl">13 m²</td></tr>
+                <tr><th scope="row" class="px-6 py-4 text-left font-normal text-moka/60">Salle de bains</th><td class="px-6 py-4">Baignoire, fenêtre</td><td class="px-6 py-4 text-right font-serif text-xl">5 m²</td></tr>
               </tbody>
             </table>
           </div>
@@ -212,19 +187,18 @@
           <div class="reveal">
             <div class="relative h-72 overflow-hidden rounded-3xl bg-sable-100">
               <svg class="absolute inset-0 h-full w-full text-moka/15" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice" fill="none" stroke="currentColor" aria-hidden="true">
-                <path d="M0 220C120 200 180 120 320 130s220 90 480 40" stroke-width="18" class="text-sage-200" stroke="currentColor"/>
                 <path d="M-10 60h820M-10 150h820M-10 250h820M120 -10v320M300 -10v320M470 -10v320M640 -10v320" stroke-width="1.5"/>
                 <path d="M60 -10 260 310M520 -10 720 310M820 40 480 310" stroke-width="1"/>
-                <rect x="540" y="40" width="170" height="90" rx="24" fill="currentColor" class="text-sage-100" stroke="none"/>
+                <rect x="320" y="90" width="160" height="110" rx="6" fill="currentColor" class="text-sage-100" stroke="none"/>
               </svg>
-              <span class="absolute left-[62%] top-[20%] text-[11px] font-medium text-sage-700">Océan Atlantique</span>
+              <span class="absolute left-[38%] top-[28%] text-[11px] font-medium text-sage-700">Palais de Justice</span>
               <span class="absolute left-1/2 top-1/2 grid h-14 w-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-moka text-ivoire shadow-float ring-8 ring-moka/10"><i data-lucide="home" class="h-5 w-5"></i></span>
             </div>
             <div class="mt-4 flex flex-wrap gap-2">
-              <span class="pill-soft"><i data-lucide="car" class="h-4 w-4"></i> Centre-ville de Biarritz · 8 min</span>
-              <span class="pill-soft"><i data-lucide="graduation-cap" class="h-4 w-4"></i> Lycée international · 6 km</span>
-              <span class="pill-soft"><i data-lucide="waves" class="h-4 w-4"></i> Côte des Basques · Accès direct</span>
-              <span class="pill-soft"><i data-lucide="plane" class="h-4 w-4"></i> Aéroport Biarritz Pays Basque · 15 min</span>
+              <span class="pill-soft"><i data-lucide="footprints" class="h-4 w-4"></i> Cours Mirabeau · 4 min à pied</span>
+              <span class="pill-soft"><i data-lucide="store" class="h-4 w-4"></i> Marché des Prêcheurs · 3 min</span>
+              <span class="pill-soft"><i data-lucide="graduation-cap" class="h-4 w-4"></i> Institut d’études politiques · 6 min</span>
+              <span class="pill-soft"><i data-lucide="train-front" class="h-4 w-4"></i> Gare TGV Aix-en-Provence · 15 min</span>
             </div>
           </div>
         </section>
@@ -234,7 +208,7 @@
         <!-- Simulateur -->
         <section class="grid gap-8 md:grid-cols-[200px_1fr]">
           <h2 class="eyebrow reveal text-moka/50">Financement</h2>
-          <div data-loan data-price="1680000" class="reveal grid gap-8 rounded-3xl bg-sable-50 p-7 md:grid-cols-[1fr_220px] md:p-9">
+          <div data-loan data-price="280000" class="reveal grid gap-8 rounded-3xl bg-sable-50 p-7 md:grid-cols-[1fr_220px] md:p-9">
             <div class="space-y-7">
               <label class="block"><span class="flex justify-between text-sm"><span class="text-moka/60">Apport</span><span data-out="apport" class="font-medium"></span></span><input name="apport" type="range" min="10" max="60" value="30" class="lux-range mt-3" /></label>
               <label class="block"><span class="flex justify-between text-sm"><span class="text-moka/60">Durée</span><span data-out="duree" class="font-medium"></span></span><input name="duree" type="range" min="10" max="25" value="20" class="lux-range mt-3" /></label>
@@ -253,15 +227,15 @@
       <aside class="lg:col-span-4">
         <div data-booking class="reveal rounded-3xl bg-ivoire-50 p-6 shadow-soft ring-1 ring-moka/5 lg:sticky lg:top-28">
           <div class="flex items-center gap-4">
-            <img src="assets/img/agent.webp" alt="Antoine Mercier" class="h-16 w-16 rounded-2xl object-cover object-top" />
+            <img src="assets/img/fondatrice.webp" alt="Hélène de Varennes" class="h-16 w-16 rounded-2xl object-cover object-top" />
             <div class="flex-1">
-              <p class="font-serif text-2xl leading-none">Antoine Mercier</p>
-              <p class="mt-1.5 text-xs text-moka/55">Associé · Valorisation Riviera</p>
-              <p class="mt-1.5 flex items-center gap-1 text-xs"><i data-lucide="star" class="h-3.5 w-3.5 fill-current text-terre"></i> 4,9 <span class="text-moka/45">· 86 mandats accompagnés</span></p>
+              <p class="font-serif text-2xl leading-none">Hélène de Varennes</p>
+              <p class="mt-1.5 text-xs text-moka/55">Associée fondatrice · Aix-en-Provence</p>
+              <p class="mt-1.5 flex items-center gap-1 text-xs"><i data-lucide="star" class="h-3.5 w-3.5 fill-current text-terre"></i> 4,9 <span class="text-moka/45">· la Maison depuis 2009</span></p>
             </div>
           </div>
           <div class="mt-5 grid grid-cols-2 gap-2">
-            <a href="tel:+33184601200" class="pill-soft justify-center !py-3 hover:bg-moka/10"><i data-lucide="phone" class="h-4 w-4"></i> Appeler</a>
+            <a href="tel:+33442961020" class="pill-soft justify-center !py-3 hover:bg-moka/10"><i data-lucide="phone" class="h-4 w-4"></i> Appeler</a>
             <a href="#" class="pill-soft justify-center !py-3 hover:bg-moka/10"><i data-lucide="message-circle" class="h-4 w-4"></i> WhatsApp</a>
           </div>
 
@@ -299,9 +273,9 @@
       <a href="index.html#selection" class="btn-ghost reveal hidden md:inline-flex">Toute la sélection <i data-lucide="arrow-right" class="i i-go h-4 w-4"></i></a>
     </div>
     <div class="grid gap-4 md:grid-cols-3">
-      <a href="bien-standard.html" class="group reveal block">
-        <div class="card aspect-[4/3]"><img src="assets/img/biarritz-hero-day.webp" alt="Villa Belharra" class="card-media" loading="lazy" /><span class="price-badge absolute left-4 top-4 !bg-noir/25">1 680 000 €</span></div>
-        <div class="mt-4 flex items-start justify-between"><div><h3 class="font-serif text-2xl">Villa <em>Belharra</em></h3><p class="mt-1 text-sm text-moka/55">Biarritz · 240 m² · 6 pièces</p></div><span class="btn-arrow border border-moka/10 group-hover:bg-moka group-hover:text-ivoire"><i data-lucide="arrow-right" class="i i-go h-4 w-4"></i></span></div>
+      <a href="bien-pied-a-terre.html" class="group reveal block">
+        <div class="card aspect-[4/3]"><img src="assets/img/standard-3.webp" alt="Appartement de charme, Nice" class="card-media" loading="lazy" /><span class="price-badge absolute left-4 top-4 !bg-noir/25">450 000 €</span></div>
+        <div class="mt-4 flex items-start justify-between"><div><h3 class="font-serif text-2xl">Appartement de <em>charme</em></h3><p class="mt-1 text-sm text-moka/55">Nice · 68 m² · 3 pièces</p></div><span class="btn-arrow border border-moka/10 group-hover:bg-moka group-hover:text-ivoire"><i data-lucide="arrow-right" class="i i-go h-4 w-4"></i></span></div>
       </a>
       <a href="bien-standard.html" class="group reveal block" style="--d:80ms">
         <div class="card aspect-[4/3]"><img src="assets/img/prop-luberon.webp" alt="Bastide des Cyprès" class="card-media" loading="lazy" /><span class="price-badge absolute left-4 top-4 !bg-noir/25">2 120 000 €</span></div>

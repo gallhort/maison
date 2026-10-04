@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Triade Concept Immo — Interactions (Vanilla JS, sans dépendance hors icônes Lucide)
+   Maison Orée — Interactions (Vanilla JS, sans dépendance hors icônes Lucide)
    Chaque module s'active uniquement si ses éléments sont présents.
    ========================================================================== */
 (() => {
@@ -72,6 +72,23 @@
     onScroll();
   }
 
+  /* ---------- Périmètre de démonstration (popover header) ---------- */
+  const demoBtn = $('[data-demo-toggle]');
+  const demoPop = $('[data-demo-pop]');
+  if (demoBtn && demoPop) {
+    const closeDemo = () => { demoPop.classList.add('hidden'); demoPop.classList.remove('flex'); demoBtn.setAttribute('aria-expanded', 'false'); };
+    const toggleDemo = () => {
+      const open = demoPop.classList.contains('hidden');
+      demoPop.classList.toggle('hidden', !open);
+      demoPop.classList.toggle('flex', open);
+      demoBtn.setAttribute('aria-expanded', String(open));
+    };
+    demoBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleDemo(); });
+    document.addEventListener('click', (e) => { if (!e.target.closest('[data-demo-pop],[data-demo-toggle]')) closeDemo(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDemo(); });
+    demoPop.addEventListener('click', (e) => { if (e.target.closest('[data-pkg]')) closeDemo(); });
+  }
+
   /* ---------- Menu mobile ---------- */
   const menu = $('#mobileMenu');
   $$('[data-menu-toggle]').forEach((b) => b.addEventListener('click', () => {
@@ -125,8 +142,11 @@
       hero.style.setProperty('--cx', `${t.left + t.width / 2 - h.left}px`);
       hero.style.setProperty('--cy', `${t.top + t.height / 2 - h.top}px`);
     };
+    // Les couches sont chargées à la demande : l'ambiance active d'abord, les autres une fois la page chargée.
+    const loadLayer = (l) => { if (l && l.dataset.src && !l.getAttribute('src')) { if (l.dataset.srcset) l.srcset = l.dataset.srcset; l.src = l.dataset.src; } };
     const setPhase = (next, btn, instant = false) => {
       if (next === current) return;
+      loadLayer(layers[next]);
       const prev = current; current = next;
       hero.dataset.phase = next;
       toggle.style.setProperty('--pi', PHASES.indexOf(next));
@@ -156,6 +176,7 @@
     $('[data-dn-auto]', hero)?.addEventListener('click', () => { manual = false; hero.classList.remove('is-manual'); setPhase(phaseAt(), $(`[data-dn="${phaseAt()}"]`, hero)); });
     addEventListener('resize', () => setOrigin());
     setPhase(phaseAt(), null, true);
+    addEventListener('load', () => setTimeout(() => Object.values(layers).forEach(loadLayer), 1200), { once: true });
     const clock = $('[data-hero-clock]');
     const tick = () => {
       if (clock) clock.textContent = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
@@ -192,7 +213,7 @@
     const count = Math.max(4, 248 - n * 57 + (n ? 3 : 0));
     const q = new URLSearchParams();
     segs.forEach((sg) => { if (sg.dataset.selected && sg.dataset.key) q.set(sg.dataset.key, sg.dataset.selected); });
-    toast(n ? `${count} demeures correspondent à votre recherche` : 'Toute la sélection Triade Concept Immo');
+    toast(n ? `${count} demeures correspondent à votre recherche` : 'Toute la sélection Maison Orée');
     setTimeout(() => go(`acheter.html${q.toString() ? '?' + q : ''}`), 650);
   });
 
@@ -324,6 +345,8 @@
       { id: 'golf', title: 'Appartement <em>Golf</em>', place: 'Aix-en-Provence', region: 'Provence', type: 'Appartement', price: 0.74, rooms: 5, beds: 3, surface: 165, img: 'prop-luberon', href: 'bien-standard.html', tags: [], order: 6 },
       { id: 'vieuxnice', title: 'Loft <em>Vieux-Nice</em>', place: 'Nice · Carré d’Or', region: 'Côte d’Azur', type: 'Appartement', price: 3.2, perMonth: true, rooms: 4, beds: 2, surface: 140, img: 'prop-marais', href: 'bien-standard.html', tags: [], label: 'Location', order: 7 },
       { id: 'boisdespins', title: 'Villa Bois des <em>Pins</em>', place: 'Grasse', region: 'Provence', type: 'Villa', price: 1.48, rooms: 8, beds: 5, surface: 380, img: 'standard-2', href: 'bien-standard.html', tags: ['Jardin'], order: 8 },
+      { id: 'palaisjustice', title: 'Pied-à-terre <em>historique</em>', place: 'Centre historique · Aix-en-Provence', region: 'Provence', type: 'Appartement', price: 0.28, rooms: 2, beds: 1, surface: 42, img: 'prop-marais', href: 'bien-pied-a-terre.html', tags: [], order: 9 },
+      { id: 'quartierarts', title: 'Appartement de <em>charme</em>', place: 'Quartier des Arts · Nice', region: 'Côte d’Azur', type: 'Appartement', price: 0.45, rooms: 3, beds: 2, surface: 68, img: 'standard-3', href: 'bien-pied-a-terre.html', tags: ['Vue mer'], order: 10 },
     ];
     const st = { type: '', region: '', budget: 20, rooms: 0, tags: new Set(), sort: 'recent', view: 'grid', favorisOnly: false };
     const favs = getFavs();
@@ -458,6 +481,50 @@
     });
     let tx = 0; lb.addEventListener('touchstart', (e) => { tx = e.touches[0].clientX; }, { passive: true });
     lb.addEventListener('touchend', (e) => { const d = e.changedTouches[0].clientX - tx; if (Math.abs(d) > 50) show(cur + (d < 0 ? 1 : -1)); });
+  }
+
+  /* ---------- Vidéo du bien (modale) ---------- */
+  const videoBtns = $$('[data-video-open]');
+  if (videoBtns.length) {
+    const vb = document.createElement('div');
+    vb.className = 'lightbox'; vb.setAttribute('role', 'dialog'); vb.setAttribute('aria-modal', 'true'); vb.setAttribute('aria-label', 'Vidéo du bien');
+    vb.innerHTML = `
+      <div class="lb-top"><span class="font-serif text-2xl italic">Film du bien</span>
+        <button type="button" class="lb-btn" data-vb-close aria-label="Fermer"><i data-lucide="x" class="h-5 w-5"></i></button></div>
+      <div class="lb-stage"><video data-vb-video controls playsinline></video></div>
+      <div></div>`;
+    document.body.appendChild(vb);
+    const video = $('[data-vb-video]', vb);
+    const openVideo = (src, poster) => {
+      video.src = src; if (poster) video.poster = poster;
+      vb.classList.add('is-open'); document.documentElement.style.overflow = 'hidden'; icons();
+      video.play().catch(() => {});
+    };
+    const closeVideo = () => { vb.classList.remove('is-open'); document.documentElement.style.overflow = ''; video.pause(); };
+    videoBtns.forEach((b) => b.addEventListener('click', (e) => { e.stopPropagation(); openVideo(b.dataset.videoOpen, b.dataset.videoPoster); }));
+    $('[data-vb-close]', vb).addEventListener('click', closeVideo);
+    vb.addEventListener('click', (e) => { if (e.target === vb || e.target.classList.contains('lb-stage')) closeVideo(); });
+    document.addEventListener('keydown', (e) => { if (vb.classList.contains('is-open') && e.key === 'Escape') closeVideo(); });
+  }
+
+  /* ---------- Visite virtuelle 360° (modale) ---------- */
+  const tourBtns = $$('[data-tour-open]');
+  if (tourBtns.length) {
+    const tb = document.createElement('div');
+    tb.className = 'lightbox'; tb.setAttribute('role', 'dialog'); tb.setAttribute('aria-modal', 'true'); tb.setAttribute('aria-label', 'Visite virtuelle 360°');
+    tb.innerHTML = `
+      <div class="lb-top"><span class="font-serif text-2xl italic">Visite virtuelle 360°</span>
+        <button type="button" class="lb-btn" data-tb-close aria-label="Fermer"><i data-lucide="x" class="h-5 w-5"></i></button></div>
+      <div class="lb-stage"><iframe data-tb-frame style="width:100%;height:100%;border:0;border-radius:1.5rem" allow="xr-spatial-tracking" allowfullscreen></iframe></div>
+      <div></div>`;
+    document.body.appendChild(tb);
+    const frame = $('[data-tb-frame]', tb);
+    const openTour = (src) => { frame.src = src; tb.classList.add('is-open'); document.documentElement.style.overflow = 'hidden'; icons(); };
+    const closeTour = () => { tb.classList.remove('is-open'); document.documentElement.style.overflow = ''; frame.src = ''; };
+    tourBtns.forEach((b) => b.addEventListener('click', (e) => { e.stopPropagation(); openTour(b.dataset.tourOpen); }));
+    $('[data-tb-close]', tb).addEventListener('click', closeTour);
+    tb.addEventListener('click', (e) => { if (e.target === tb) closeTour(); });
+    document.addEventListener('keydown', (e) => { if (tb.classList.contains('is-open') && e.key === 'Escape') closeTour(); });
   }
 
   /* ---------- Estimation pas à pas (estimer.html) ---------- */

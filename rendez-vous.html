@@ -3,31 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prendre rendez-vous — Triade Concept Immo</title>
-  <meta name="description" content="Réservez un rendez-vous avec un conseiller Triade Concept Immo : à l’agence d’Aix-en-Provence, à domicile ou en visio." />
+  <title>Prendre rendez-vous — Maison Orée</title>
+  <meta name="description" content="Réservez un rendez-vous avec un conseiller Maison Orée : dans notre Maison d’Aix-en-Provence, à domicile ou en visio." />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=1790456199" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" /></noscript>
+  <link rel="stylesheet" href="assets/css/styles.css?v=1791147689" />
 </head>
 <body>
 <header id="siteHeader" data-tone="dark" data-scroll="light" class="fixed inset-x-0 top-0 z-50 px-3 pt-3 md:px-5 md:pt-5">
   <div class="nav-shell mx-auto flex max-w-shell items-center justify-between rounded-full py-2 pl-5 pr-2 md:pl-7">
-    <a href="index.html" class="flex items-center gap-2.5 " aria-label="Triade Concept Immo — accueil">
+    <a href="index.html" class="flex items-center gap-2.5 " aria-label="Maison Orée — accueil">
   <span class="brand-mark relative inline-block h-9 w-9 shrink-0">
-    <img src="assets/img/Logo_TriadeConceptImmo_blanc_fond_transparent.png" class="brand-mark-blanc absolute inset-0 h-9 w-9 object-contain" alt="" aria-hidden="true" />
-    <img src="assets/img/Logo_TriadeConceptImmo_sans_texte.png" class="brand-mark-dore absolute inset-0 h-9 w-9 object-contain" alt="" aria-hidden="true" />
-    <img src="assets/img/Logo_TriadeConceptImmo_noir_fond_transparent.png" class="brand-mark-noir absolute inset-0 h-9 w-9 object-contain" alt="" aria-hidden="true" />
+    <img src="assets/img/logo-maison-oree-blanc.svg" class="brand-mark-blanc absolute inset-0 h-9 w-9 object-contain" alt="" aria-hidden="true" />
+    <img src="assets/img/logo-maison-oree-dore.svg" class="brand-mark-dore absolute inset-0 h-9 w-9 object-contain" alt="" aria-hidden="true" />
+    <img src="assets/img/logo-maison-oree-noir.svg" class="brand-mark-noir absolute inset-0 h-9 w-9 object-contain" alt="" aria-hidden="true" />
   </span>
-  <span class="brand-word font-serif text-[1.45rem] leading-none tracking-tight">Triade Concept <em class="italic">Immo</em></span>
+  <span class="brand-word font-serif text-[1.45rem] leading-none tracking-tight">Maison <em class="italic">Orée</em></span>
 </a>
     <nav class="hidden items-center lg:flex" aria-label="Navigation principale">
-      <a href="index.html" class="nav-link">Accueil</a>
-<a href="acheter.html" class="nav-link">Acheter</a>
-<a href="bien-prestige.html" class="nav-link">Collection Privée</a>
-<a href="feng-shui.html" class="nav-link">Feng Shui</a>
+      <a href="acheter.html" class="nav-link">Collection Privée</a>
+<a href="index.html#references-privees" class="nav-link">Transactions</a>
 <a href="maison.html" class="nav-link">La Maison</a>
+<a href="feng-shui.html" class="nav-link">Art de vivre</a>
 <a href="actualites.html" class="nav-link" data-min-package="signature">Journal</a>
     </nav>
     <div class="flex items-center gap-1">
@@ -38,25 +38,38 @@
       <a href="connexion.html" class="hidden h-11 w-11 place-items-center rounded-full transition hover:bg-moka/5 sm:grid" aria-label="Espace professionnel" title="Espace professionnel">
         <i data-lucide="layout-dashboard" class="h-4 w-4"></i>
       </a>
-      <a href="estimer.html" class="hidden rounded-full px-4 py-2 text-[13.5px] font-medium opacity-80 transition hover:opacity-100 md:inline-flex">Estimer mon bien</a>
-      <a href="rendez-vous.html" class="nav-cta hidden items-center gap-2 rounded-full px-5 py-3 text-[13.5px] font-medium sm:inline-flex">Prendre rendez-vous <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+      <div class="relative">
+        <button type="button" data-demo-toggle class="hidden h-11 w-11 place-items-center rounded-full transition hover:bg-moka/5 sm:grid" aria-label="Périmètre de démonstration" aria-haspopup="true" aria-expanded="false" title="Périmètre de démonstration">
+          <i data-lucide="sliders-horizontal" class="h-4 w-4"></i>
+        </button>
+        <div data-demo-pop class="absolute right-0 top-full z-20 mt-2 hidden w-56 flex-col gap-2 rounded-2xl border border-moka/10 bg-ivoire p-4 text-moka shadow-float">
+          <p class="eyebrow text-moka/45">Périmètre de démonstration</p>
+          <div class="mt-1 flex flex-col gap-1.5" data-pkg-toggle role="group" aria-label="Périmètre de démonstration">
+            <button type="button" data-pkg="essentiel" class="pill-line justify-center transition aria-pressed:border-moka aria-pressed:bg-moka aria-pressed:text-ivoire">Essentiel</button>
+            <button type="button" data-pkg="signature" class="pill-line justify-center transition aria-pressed:border-moka aria-pressed:bg-moka aria-pressed:text-ivoire">Signature</button>
+            <button type="button" data-pkg="full" class="pill-line justify-center transition aria-pressed:border-moka aria-pressed:bg-moka aria-pressed:text-ivoire">Prestige FULL</button>
+          </div>
+        </div>
+      </div>
+      <a href="estimer.html" class="hidden rounded-full px-4 py-2 text-[13.5px] font-medium opacity-80 transition hover:opacity-100 md:inline-flex">Valoriser un bien</a>
+      <a href="rendez-vous.html" class="nav-cta hidden items-center gap-2 rounded-full px-5 py-3 text-[13.5px] font-medium sm:inline-flex">Confier un bien <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
       <button class="grid h-11 w-11 place-items-center rounded-full lg:hidden" data-menu-toggle aria-expanded="false" aria-controls="mobileMenu" aria-label="Ouvrir le menu"><i data-lucide="menu" class="h-5 w-5"></i></button>
     </div>
   </div>
 </header>
 
 <div id="mobileMenu" class="mobile-menu fixed inset-0 z-[60] flex flex-col bg-moka p-6 text-ivoire lg:hidden">
-  <div class="flex items-center justify-between"><a href="index.html" class="flex items-center gap-2.5 " aria-label="Triade Concept Immo — accueil">
+  <div class="flex items-center justify-between"><a href="index.html" class="flex items-center gap-2.5 " aria-label="Maison Orée — accueil">
   <span class="brand-mark relative inline-block h-9 w-9 shrink-0">
-    <img src="assets/img/Logo_TriadeConceptImmo_blanc_fond_transparent.png" class="brand-mark-blanc absolute inset-0 h-9 w-9 object-contain" alt="" aria-hidden="true" />
-    <img src="assets/img/Logo_TriadeConceptImmo_sans_texte.png" class="brand-mark-dore absolute inset-0 h-9 w-9 object-contain" alt="" aria-hidden="true" />
-    <img src="assets/img/Logo_TriadeConceptImmo_noir_fond_transparent.png" class="brand-mark-noir absolute inset-0 h-9 w-9 object-contain" alt="" aria-hidden="true" />
+    <img src="assets/img/logo-maison-oree-blanc.svg" class="brand-mark-blanc absolute inset-0 h-9 w-9 object-contain" alt="" aria-hidden="true" />
+    <img src="assets/img/logo-maison-oree-dore.svg" class="brand-mark-dore absolute inset-0 h-9 w-9 object-contain" alt="" aria-hidden="true" />
+    <img src="assets/img/logo-maison-oree-noir.svg" class="brand-mark-noir absolute inset-0 h-9 w-9 object-contain" alt="" aria-hidden="true" />
   </span>
-  <span class="brand-word font-serif text-[1.45rem] leading-none tracking-tight">Triade Concept <em class="italic">Immo</em></span>
+  <span class="brand-word font-serif text-[1.45rem] leading-none tracking-tight">Maison <em class="italic">Orée</em></span>
 </a><button class="grid h-11 w-11 place-items-center rounded-full bg-white/10" data-menu-toggle aria-label="Fermer le menu"><i data-lucide="x" class="h-5 w-5"></i></button></div>
   <nav class="mt-16 flex flex-col gap-2" aria-label="Navigation mobile">
-    <a href="index.html" class="font-serif text-5xl leading-tight">Accueil</a><a href="acheter.html" class="font-serif text-5xl leading-tight">Acheter</a><a href="bien-prestige.html" class="font-serif text-5xl leading-tight">Collection Privée</a><a href="feng-shui.html" class="font-serif text-5xl leading-tight">Feng Shui</a><a href="maison.html" class="font-serif text-5xl leading-tight">La Maison</a><a href="actualites.html" class="font-serif text-5xl leading-tight" data-min-package="signature">Journal</a>
-    <a href="estimer.html" class="mt-6 inline-flex items-center gap-2 self-start rounded-full border border-white/20 px-5 py-3 text-sm">Estimer mon bien <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+    <a href="acheter.html" class="font-serif text-5xl leading-tight">Collection Privée</a><a href="index.html#references-privees" class="font-serif text-5xl leading-tight">Transactions</a><a href="maison.html" class="font-serif text-5xl leading-tight">La Maison</a><a href="feng-shui.html" class="font-serif text-5xl leading-tight">Art de vivre</a><a href="actualites.html" class="font-serif text-5xl leading-tight" data-min-package="signature">Journal</a>
+    <a href="estimer.html" class="mt-6 inline-flex items-center gap-2 self-start rounded-full border border-white/20 px-5 py-3 text-sm">Valoriser un bien <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
   </nav>
   <div class="mt-auto space-y-3 text-sm text-ivoire/60"><p>+33 4 42 96 10 20</p><p>conciergerie@triadeconceptimmo.fr</p></div>
 </div>
@@ -86,11 +99,12 @@
         <!-- 1 · Motif -->
         <div class="rdv-block">
           <p class="rdv-label"><span>01</span> Objet du rendez-vous</p>
-          <div class="mt-6 grid grid-cols-2 gap-2.5 md:grid-cols-4">
+          <div class="mt-6 grid grid-cols-2 gap-2.5 md:grid-cols-5">
             <label class="opt-card opt-card--sm"><input type="radio" name="motif" value="Acquérir une demeure" checked /><i data-lucide="key-round" class="opt-ico"></i><span class="opt-title">Acquérir</span></label>
             <label class="opt-card opt-card--sm"><input type="radio" name="motif" value="Vendre une demeure" /><i data-lucide="signature" class="opt-ico"></i><span class="opt-title">Vendre</span></label>
-            <label class="opt-card opt-card--sm"><input type="radio" name="motif" value="Visite d’expertise" /><i data-lucide="ruler" class="opt-ico"></i><span class="opt-title">Faire estimer</span></label>
-            <label class="opt-card opt-card--sm"><input type="radio" name="motif" value="Consultation Feng Shui" /><i data-lucide="leaf" class="opt-ico"></i><span class="opt-title">Feng Shui</span></label>
+            <label class="opt-card opt-card--sm"><input type="radio" name="motif" value="Visite d’expertise" /><i data-lucide="ruler" class="opt-ico"></i><span class="opt-title">Valoriser</span></label>
+            <label class="opt-card opt-card--sm"><input type="radio" name="motif" value="Family office · institutionnel" /><i data-lucide="briefcase" class="opt-ico"></i><span class="opt-title">Family office</span></label>
+            <label class="opt-card opt-card--sm"><input type="radio" name="motif" value="Consultation Feng Shui" /><i data-lucide="leaf" class="opt-ico"></i><span class="opt-title">Art de vivre</span></label>
           </div>
         </div>
 
@@ -98,7 +112,7 @@
         <div class="rdv-block">
           <p class="rdv-label"><span>02</span> Où souhaitez-vous nous rencontrer ?</p>
           <div class="mt-6 grid gap-2.5 md:grid-cols-3">
-            <label class="opt-card opt-card--row"><input type="radio" name="format" value="En agence" checked /><i data-lucide="armchair" class="opt-ico"></i><span class="opt-title">Agence Aix-en-Provence</span><span class="opt-sub">67 Cours Mirabeau</span></label>
+            <label class="opt-card opt-card--row"><input type="radio" name="format" value="En agence" checked /><i data-lucide="armchair" class="opt-ico"></i><span class="opt-title">Notre Maison · Aix-en-Provence</span><span class="opt-sub">67 Cours Mirabeau</span></label>
             <label class="opt-card opt-card--row"><input type="radio" name="format" value="Chez vous" /><i data-lucide="house" class="opt-ico"></i><span class="opt-title">À domicile</span><span class="opt-sub">Ou sur le bien concerné</span></label>
             <label class="opt-card opt-card--row"><input type="radio" name="format" value="En visio" /><i data-lucide="video" class="opt-ico"></i><span class="opt-title">En visio</span><span class="opt-sub">Lien privé envoyé par e-mail</span></label>
           </div>
@@ -154,7 +168,7 @@
           <p class="eyebrow text-ivoire/50">Votre rendez-vous</p>
           <div class="mt-6 flex items-center gap-4">
             <img src="assets/img/fondatrice.webp" alt="" class="h-14 w-14 rounded-full object-cover object-top" data-r-img />
-            <div><p class="font-serif text-2xl" data-r-agent>Hélène de Varennes</p><p class="text-xs text-ivoire/55" data-r-role>Fondatrice · Paris</p></div>
+            <div><p class="font-serif text-2xl" data-r-agent>Hélène de Varennes</p><p class="text-xs text-ivoire/55" data-r-role>Associée fondatrice · Aix-en-Provence</p></div>
           </div>
           <dl class="mt-8 space-y-4 border-t border-white/10 pt-6 text-sm">
             <div class="flex justify-between gap-4"><dt class="text-ivoire/50">Objet</dt><dd class="text-right" data-r="motif">—</dd></div>
@@ -205,22 +219,24 @@
       <div class="grid gap-14 lg:grid-cols-12">
         <div class="lg:col-span-6">
           <p class="eyebrow text-ivoire/50">Expertise et Confiance</p>
-          <h2 class="mt-5 text-h2">Parlons de votre <em>prochaine</em> demeure.</h2>
-          <form class="mt-10 flex max-w-md items-center gap-2 rounded-full border border-white/15 bg-white/5 p-1.5 pl-6" data-fake-submit="Merci — votre conseiller vous rappelle sous 24 h">
-            <label for="nl" class="sr-only">Adresse e-mail</label>
-            <input id="nl" type="email" required placeholder="Votre adresse e-mail" class="w-full bg-transparent text-sm outline-none placeholder:text-ivoire/40" />
-            <button class="btn-light shrink-0 !py-3">Être rappelé <i data-lucide="arrow-right" class="i i-go h-4 w-4"></i></button>
+          <h2 class="mt-5 text-h2">Votre patrimoine mérite une stratégie <em>singulière</em>.</h2>
+          <p class="mt-4 max-w-md text-sm leading-relaxed text-ivoire/65">Vous envisagez de vendre, transmettre, valoriser ou repositionner une propriété d’exception ? Échangeons en toute confidentialité.</p>
+          <form class="mt-8 flex max-w-md items-center gap-2 rounded-full border border-white/15 bg-white/5 p-1.5 pl-6" data-fake-submit="Merci — votre conseiller vous rappelle sous 24 h">
+            <label for="nl" class="sr-only">Votre adresse e-mail ou votre numéro de téléphone</label>
+            <input id="nl" type="text" required placeholder="Votre adresse e-mail ou votre numéro de téléphone" class="w-full bg-transparent text-sm outline-none placeholder:text-ivoire/40" />
+            <button class="btn-light shrink-0 !py-3">Être rappelé par la Maison <i data-lucide="arrow-right" class="i i-go h-4 w-4"></i></button>
           </form>
+          <p class="mt-3 text-xs text-ivoire/40">Votre demande est traitée de manière strictement confidentielle.</p>
         </div>
         <div class="grid grid-cols-2 gap-10 text-sm sm:grid-cols-3 lg:col-span-6">
-          <div><p class="eyebrow text-ivoire/40">Explorer</p><ul class="mt-5 space-y-3 text-ivoire/80"><li><a class="hover:text-white" href="acheter.html">Acheter</a></li><li><a class="hover:text-white" href="bien-prestige.html">Collection Privée</a></li><li><a class="hover:text-white" href="feng-shui.html">Feng Shui</a></li><li><a class="hover:text-white" href="patrimoine.html">Accompagnement patrimonial</a></li><li><a class="hover:text-white" href="estimer.html">Vendre · Estimer</a></li><li><a class="hover:text-white" href="maison.html">La Maison</a></li><li data-min-package="signature"><a class="hover:text-white" href="actualites.html">Journal</a></li><li><a class="hover:text-white" href="rendez-vous.html">Rendez-vous</a></li></ul></div>
+          <div><p class="eyebrow text-ivoire/40">Explorer</p><ul class="mt-5 space-y-3 text-ivoire/80"><li><a class="hover:text-white" href="acheter.html">Collection Privée</a></li><li><a class="hover:text-white" href="patrimoine.html">Accompagnement patrimonial</a></li><li><a class="hover:text-white" href="estimer.html">Estimation confidentielle</a></li><li><a class="hover:text-white" href="index.html#references-privees">Transactions</a></li><li><a class="hover:text-white" href="feng-shui.html">Art de vivre</a></li><li><a class="hover:text-white" href="maison.html">La Maison</a></li><li data-min-package="signature"><a class="hover:text-white" href="actualites.html">Journal</a></li><li><a class="hover:text-white" href="rendez-vous.html">Rendez-vous</a></li></ul></div>
           <div><p class="eyebrow text-ivoire/40">Adresse</p><ul class="mt-5 space-y-3 text-ivoire/80"><li>67 Cours Mirabeau<br/>13100 Aix-en-Provence</li><li><a class="hover:text-white" href="maison.html#bureaux">Voir l’agence <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></a></li></ul></div>
           <div><p class="eyebrow text-ivoire/40"><a class="hover:text-white" href="contact.html">Contact</a></p><ul class="mt-5 space-y-3 text-ivoire/80"><li><a class="hover:text-white" href="tel:+33442961020">+33 4 42 96 10 20</a></li><li><a class="hover:text-white" href="mailto:conciergerie@triadeconceptimmo.fr">conciergerie@<br/>triadeconceptimmo.fr</a></li><li class="flex gap-3 pt-1"><a href="#" aria-label="Instagram" class="grid h-9 w-9 place-items-center rounded-full border border-white/15 hover:bg-white/10"><i data-lucide="instagram" class="h-4 w-4"></i></a><a href="#" aria-label="LinkedIn" class="grid h-9 w-9 place-items-center rounded-full border border-white/15 hover:bg-white/10"><i data-lucide="linkedin" class="h-4 w-4"></i></a></li></ul></div>
         </div>
       </div>
-      <p class="pointer-events-none mt-20 select-none whitespace-nowrap font-serif text-[21vw] leading-[0.78] tracking-tighter text-ivoire/[.07] md:mt-28 lg:text-[18.5vw]" aria-hidden="true">Triade Concept <em>Immo</em></p>
+      <p class="pointer-events-none mt-20 select-none whitespace-nowrap font-serif text-[21vw] leading-[0.78] tracking-tighter text-ivoire/[.07] md:mt-28 lg:text-[18.5vw]" aria-hidden="true">Maison <em>Orée</em></p>
       <div class="flex flex-col justify-between gap-3 border-t border-white/10 py-6 text-xs text-ivoire/45 sm:flex-row">
-        <p>© <span data-year></span> Triade Concept Immo — Immobilier de prestige & Feng Shui. Carte T n° CPI 1301 2026 000 000 000.</p>
+        <p>© <span data-year></span> Maison Orée — Maison d’immobilier rare & d’exception. Carte T n° CPI 1301 2026 000 000 000.</p>
         <p class="flex gap-5"><a href="mentions-legales.html" class="hover:text-ivoire">Mentions légales</a><a href="connexion.html" class="hover:text-ivoire">Espace professionnel</a></p>
       </div>
     </div>
@@ -234,7 +250,7 @@
      périmètre « Essentiel », les pages Signature/Prestige FULL disparaissent
      de la navigation sans casser la mise en page. */
   :root[data-package="essentiel"] [data-min-package] { display: none !important; }
-  /* Estimer mon bien : formulaire simple en Essentiel, simulateur complet en Signature/FULL. */
+  /* Estimer mon bien / vidéo / visite 3D : contenu simple en Essentiel, complet en Signature/FULL. */
   :root[data-package="essentiel"] [data-tier="full"] { display: none !important; }
   :root:not([data-package="essentiel"]) [data-tier="simple"] { display: none !important; }
 
@@ -254,7 +270,7 @@
   #siteHeader[data-scroll="dark"].is-scrolled .brand-word { color: inherit; }
 </style>
 <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
-<script src="assets/js/package.js?v=1790456199"></script>
-<script src="assets/js/main.js?v=1790456199"></script>
+<script src="assets/js/package.js?v=1791147689"></script>
+<script src="assets/js/main.js?v=1791147689"></script>
 </body>
 </html>

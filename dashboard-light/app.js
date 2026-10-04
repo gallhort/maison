@@ -1,5 +1,5 @@
 /* =====================================================================
-   Triade Concept Immo — Back-Office Essentiel · app.js
+   Maison Orée — Back-Office Essentiel · app.js
    Même architecture que Prestige FULL : une IIFE, routeur par hash, table
    `renderers`, rendu complet via innerHTML, actions déclarées par
    data-action="…" dans un gestionnaire de clic global.
